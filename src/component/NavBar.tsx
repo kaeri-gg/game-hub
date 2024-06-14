@@ -1,40 +1,19 @@
-import {
-  ColorModeScript,
-  FormControl,
-  FormLabel,
-  HStack,
-  Image,
-  Input,
-  InputGroup,
-  InputLeftElement,
-  Switch,
-  theme,
-} from "@chakra-ui/react";
+import { HStack, Image } from "@chakra-ui/react";
 import logo from "../assets/logo.webp";
-import { SearchIcon } from "@chakra-ui/icons";
+import ColorModeSwitch from "./ColorModeSwitch";
+//import SearchInput from "./SearchInput";
 
 const NavBar = () => {
   return (
-    <HStack>
+    <HStack justifyContent="space-between" padding="10px">
       {/* logo */}
       <Image src={logo} boxSize="60px" />
 
       {/* search input field */}
-      <InputGroup>
-        <InputLeftElement pointerEvents="none">
-          <SearchIcon color="gray.300" />
-        </InputLeftElement>
-        <Input type="text" placeholder="Search game..." />
-      </InputGroup>
+      {/* <SearchInput /> */}
 
       {/* darkmode switch */}
-      <FormControl display="flex">
-        <FormLabel htmlFor="dark-mode" mb="0">
-          Dark mode
-        </FormLabel>
-        <Switch id="dark-mode" isChecked />
-        <ColorModeScript initialColorMode={theme.config.initialColorMode} />
-      </FormControl>
+      <ColorModeSwitch />
     </HStack>
   );
 };
