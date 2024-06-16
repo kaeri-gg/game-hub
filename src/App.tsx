@@ -1,27 +1,29 @@
-import { Grid, GridItem, Show } from "@chakra-ui/react";
 import NavBar from "./component/NavBar";
+import { useState } from "react";
+import Genre from "./component/Genre";
 
 function App() {
-  return (
-    <Grid
-      templateAreas={{
-        base: `"nav" "main"`,
-        lg: `"nav nav" "aside main"`,
-      }}
-    >
-      <GridItem area="nav">
-        <NavBar />
-      </GridItem>
-      <Show above="lg">
-        <GridItem area="aside" bg="gold">
-          Aside
-        </GridItem>
-      </Show>
+  const [genre, setGenre] = useState([
+    { id: "1", image: "https://picsum.photos/32/", name: "Action" },
+    { id: "2", image: "https://picsum.photos/200/", name: "Indie" },
+    { id: "3", image: "https://picsum.photos/200/", name: "Adventure" },
+    { id: "4", image: "https://picsum.photos/200/", name: "RPG" },
+    { id: "5", image: "https://picsum.photos/200/", name: "Strategy" },
+    { id: "6", image: "https://picsum.photos/200/", name: "Shooter" },
+  ]);
 
-      <GridItem area="main" bg="dodgerblue">
-        Main
-      </GridItem>
-    </Grid>
+  return (
+    <>
+      <div className="col-12">
+        <NavBar></NavBar>
+      </div>
+      <div className="container-fluid">
+        <div className="col-2">
+          <Genre></Genre>
+        </div>
+        <div className="col-9"></div>
+      </div>
+    </>
   );
 }
 
