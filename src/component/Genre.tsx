@@ -1,8 +1,18 @@
-const Genre = () => {
+interface Children {
+  id: number;
+  name: string;
+  img: string;
+}
+
+interface Props {
+  genre: Children[];
+}
+const Genre = ({ genre }: Props) => {
   return (
     <>
       <div className="">
         <div className="grid gap-0 row-gap-3">
+          {}
           <div className="p-2 g-col-6 d-flex">
             <img
               src="https://picsum.photos/32/"
