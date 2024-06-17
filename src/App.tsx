@@ -3,6 +3,7 @@ import { useState } from "react";
 import Genre from "./component/Genre";
 import PageTitle from "./component/PageTitle";
 import Platforms from "./component/Platforms";
+import OrderByRelevance from "./component/OrderByRelevance";
 
 function App() {
   const [pageTitle, setPageTitle] = useState("Games");
@@ -28,6 +29,15 @@ function App() {
     setPageTitle(name);
   };
 
+  const [relevances, setRelevances] = useState([
+    { id: 1, name: "Relevance", link: "#" },
+    { id: 2, name: "Date added", link: "#" },
+    { id: 3, name: "Name", link: "#" },
+    { id: 4, name: "Release date", link: "#" },
+    { id: 5, name: "Popularity", link: "#" },
+    { id: 6, name: "Average rating", link: "#" },
+  ]);
+
   return (
     <>
       <div className="col-12">
@@ -39,7 +49,10 @@ function App() {
         </div>
         <div className="col-10">
           <PageTitle name={pageTitle}></PageTitle>
-          <Platforms platforms={platforms}></Platforms>
+          <div className="d-flex">
+            <Platforms platforms={platforms}></Platforms>
+            <OrderByRelevance relevances={relevances}></OrderByRelevance>
+          </div>
         </div>
       </div>
     </>
