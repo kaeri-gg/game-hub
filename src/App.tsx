@@ -4,12 +4,12 @@ import Genre from "./component/Genre";
 
 function App() {
   const [genre, setGenre] = useState([
-    { id: "1", img: "https://picsum.photos/32/", name: "Action" },
-    { id: "2", img: "https://picsum.photos/200/", name: "Indie" },
-    { id: "3", img: "https://picsum.photos/200/", name: "Adventure" },
-    { id: "4", img: "https://picsum.photos/200/", name: "RPG" },
-    { id: "5", img: "https://picsum.photos/200/", name: "Strategy" },
-    { id: "6", img: "https://picsum.photos/200/", name: "Shooter" },
+    { id: 1, img: "https://picsum.photos/32/", name: "Action" },
+    { id: 2, img: "https://picsum.photos/32/", name: "Indie" },
+    { id: 3, img: "https://picsum.photos/32/", name: "Adventure" },
+    { id: 4, img: "https://picsum.photos/32/", name: "RPG" },
+    { id: 5, img: "https://picsum.photos/32/", name: "Strategy" },
+    { id: 6, img: "https://picsum.photos/32/", name: "Shooter" },
   ]);
 
   return (
@@ -19,7 +19,7 @@ function App() {
       </div>
       <div className="container-fluid">
         <div className="col-2">
-          <Genre genre={genre}></Genre>
+          <Genre genres={genre}></Genre>
         </div>
         <div className="col-9"></div>
       </div>

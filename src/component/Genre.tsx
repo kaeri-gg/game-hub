@@ -4,23 +4,20 @@ interface Children {
   img: string;
 }
 
-interface Props {
-  genre: Children[];
+interface Genre {
+  genres: Children[];
 }
-const Genre = ({ genre }: Props) => {
+const Genre = ({ genres }: Genre) => {
   return (
     <>
       <div className="">
         <div className="grid gap-0 row-gap-3">
-          {}
-          <div className="p-2 g-col-6 d-flex">
-            <img
-              src="https://picsum.photos/32/"
-              alt="Game 3"
-              className="img-fluid me-3"
-            />
-            <span className="align-content-center"> Grid item 1</span>
-          </div>
+          {genres.map((genre) => (
+            <div className="p-2 g-col-6 d-flex" key={genre.id}>
+              <img src={genre.img} className="img-fluid me-3" />
+              <span className="align-content-center"> {genre.name}</span>
+            </div>
+          ))}
         </div>
       </div>
     </>
