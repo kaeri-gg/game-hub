@@ -54,7 +54,9 @@ function App() {
             <Platforms platforms={platforms}></Platforms>
             <OrderByRelevance relevances={relevances}></OrderByRelevance>
           </div>
-          <div className="d-flex">{/* <GameGrid></GameGrid> */}</div>
+          <div className="d-flex">
+            <GameGrid></GameGrid>
+          </div>
         </div>
       </div>
     </>
