@@ -4,6 +4,7 @@ import Genre from "./component/Genre";
 import PageTitle from "./component/PageTitle";
 import Platforms from "./component/Platforms";
 import OrderByRelevance from "./component/OrderByRelevance";
+import GameGrid from "./component/GameGrid";
 
 function App() {
   const [pageTitle, setPageTitle] = useState("Games");
@@ -53,6 +54,7 @@ function App() {
             <Platforms platforms={platforms}></Platforms>
             <OrderByRelevance relevances={relevances}></OrderByRelevance>
           </div>
+          <div className="d-flex">{/* <GameGrid></GameGrid> */}</div>
         </div>
       </div>
     </>
