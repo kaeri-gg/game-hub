@@ -1,354 +1,382 @@
 {
-  "posts": [
-    { "id": "1", "title": "a title", "views": 100 },
-    { "id": "2", "title": "another title", "views": 200 }
-  ],
-  "comments": [
-    { "id": "1", "text": "a comment about post 1", "postId": "1" },
-    { "id": "2", "text": "another comment about post 1", "postId": "1" }
-  ],
-  "profile": {
-    "name": "typicode"
-  },
-  "genres": [
-    {
-      "id": 1,
-      "img": "https://picsum.photos/32/",
-      "name": "Action",
-      "link": "#"
+    "posts": [
+        { "id": "1", "title": "a title", "views": 100 },
+        { "id": "2", "title": "another title", "views": 200 }
+    ],
+    "comments": [
+        { "id": "1", "text": "a comment about post 1", "postId": "1" },
+        { "id": "2", "text": "another comment about post 1", "postId": "1" }
+    ],
+    "profile": {
+        "name": "typicode"
     },
-    {
-      "id": 2,
-      "img": "https://picsum.photos/32/",
-      "name": "Indie",
-      "link": "#"
-    },
-    {
-      "id": 3,
-      "img": "https://picsum.photos/32/",
-      "name": "Adventure",
-      "link": "#"
-    },
-    { "id": 4, "img": "https://picsum.photos/32/", "name": "RPG", "link": "#" },
-    {
-      "id": 5,
-      "img": "https://picsum.photos/32/",
-      "name": "Strategy",
-      "link": "#"
-    },
-    {
-      "id": 6,
-      "img": "https://picsum.photos/32/",
-      "name": "Shooter",
-      "link": "#"
-    }
-  ],
+    "genres": [{
+            "id": 1,
+            "img": "https://picsum.photos/32/",
+            "name": "Action",
+            "link": "#"
+        },
+        {
+            "id": 2,
+            "img": "https://picsum.photos/32/",
+            "name": "Indie",
+            "link": "#"
+        },
+        {
+            "id": 3,
+            "img": "https://picsum.photos/32/",
+            "name": "Adventure",
+            "link": "#"
+        },
+        { "id": 4, "img": "https://picsum.photos/32/", "name": "RPG", "link": "#" },
+        {
+            "id": 5,
+            "img": "https://picsum.photos/32/",
+            "name": "Strategy",
+            "link": "#"
+        },
+        {
+            "id": 6,
+            "img": "https://picsum.photos/32/",
+            "name": "Shooter",
+            "link": "#"
+        }
+    ],
 
-  "platforms": [
-    { "id": 1, "name": "PC", "link": "#" },
-    { "id": 2, "name": "Xbox", "link": "#" },
-    { "id": 3, "name": "PlayStation", "link": "#" },
-    { "id": 4, "name": "IOS", "link": "#" },
-    { "id": 5, "name": "Android", "link": "#" },
-    { "id": 6, "name": "Apple Macintosh", "link": "#" }
-  ],
+    "platforms": [
+        { "id": 1, "name": "PC", "link": "#" },
+        { "id": 2, "name": "Xbox", "link": "#" },
+        { "id": 3, "name": "PlayStation", "link": "#" },
+        { "id": 4, "name": "IOS", "link": "#" },
+        { "id": 5, "name": "Android", "link": "#" },
+        { "id": 6, "name": "Apple Macintosh", "link": "#" }
+    ],
 
-  "relevance": [
-    { "id": 1, "name": "Relevance", "link": "#" },
-    { "id": 2, "name": "Date added", "link": "#" },
-    { "id": 3, "name": "Name", "link": "#" },
-    { "id": 4, "name": "Release date", "link": "#" },
-    { "id": 5, "name": "Popularity", "link": "#" },
-    { "id": 6, "name": "Average rating", "link": "#" }
-  ],
-  "games": [
-    {
-      "id": 1,
-      "name": "The Witcher 3: Wild Hunt",
-      "platform": "PC",
-      "genre": "RPG",
-      "dateAdded": "2023-01-01",
-      "releaseDate": "2015-05-19",
-      "popularity": 95,
-      "averageRating": 9.8
-    },
-    {
-      "id": 2,
-      "name": "God of War",
-      "platform": "PlayStation",
-      "genre": "Action",
-      "dateAdded": "2023-02-01",
-      "releaseDate": "2018-04-20",
-      "popularity": 93,
-      "averageRating": 9.6
-    },
-    {
-      "id": 3,
-      "name": "Halo Infinite",
-      "platform": "Xbox",
-      "genre": "Shooter",
-      "dateAdded": "2023-03-01",
-      "releaseDate": "2021-12-08",
-      "popularity": 85,
-      "averageRating": 8.7
-    },
-    {
-      "id": 4,
-      "name": "Minecraft",
-      "platform": "PC",
-      "genre": "Sandbox",
-      "dateAdded": "2023-01-15",
-      "releaseDate": "2011-11-18",
-      "popularity": 99,
-      "averageRating": 9.5
-    },
-    {
-      "id": 5,
-      "name": "Cyberpunk 2077",
-      "platform": "PlayStation",
-      "genre": "RPG",
-      "dateAdded": "2023-04-01",
-      "releaseDate": "2020-12-10",
-      "popularity": 75,
-      "averageRating": 7.8
-    },
-    {
-      "id": 6,
-      "name": "Red Dead Redemption 2",
-      "platform": "Xbox",
-      "genre": "Action",
-      "dateAdded": "2023-05-01",
-      "releaseDate": "2018-10-26",
-      "popularity": 92,
-      "averageRating": 9.7
-    },
-    {
-      "id": 7,
-      "name": "Fortnite",
-      "platform": "PC",
-      "genre": "Battle Royale",
-      "dateAdded": "2023-06-01",
-      "releaseDate": "2017-07-21",
-      "popularity": 98,
-      "averageRating": 8.5
-    },
-    {
-      "id": 8,
-      "name": "Overwatch",
-      "platform": "PlayStation",
-      "genre": "Shooter",
-      "dateAdded": "2023-07-01",
-      "releaseDate": "2016-05-24",
-      "popularity": 88,
-      "averageRating": 8.9
-    },
-    {
-      "id": 9,
-      "name": "The Legend of Zelda: Breath of the Wild",
-      "platform": "Nintendo Switch",
-      "genre": "Adventure",
-      "dateAdded": "2023-08-01",
-      "releaseDate": "2017-03-03",
-      "popularity": 94,
-      "averageRating": 9.8
-    },
-    {
-      "id": 10,
-      "name": "Apex Legends",
-      "platform": "PC",
-      "genre": "Battle Royale",
-      "dateAdded": "2023-09-01",
-      "releaseDate": "2019-02-04",
-      "popularity": 87,
-      "averageRating": 8.3
-    },
-    {
-      "id": 11,
-      "name": "Final Fantasy VII Remake",
-      "platform": "PlayStation",
-      "genre": "RPG",
-      "dateAdded": "2023-10-01",
-      "releaseDate": "2020-04-10",
-      "popularity": 90,
-      "averageRating": 9.2
-    },
-    {
-      "id": 12,
-      "name": "Forza Horizon 5",
-      "platform": "Xbox",
-      "genre": "Racing",
-      "dateAdded": "2023-11-01",
-      "releaseDate": "2021-11-09",
-      "popularity": 86,
-      "averageRating": 8.7
-    },
-    {
-      "id": 13,
-      "name": "Animal Crossing: New Horizons",
-      "platform": "Nintendo Switch",
-      "genre": "Simulation",
-      "dateAdded": "2023-12-01",
-      "releaseDate": "2020-03-20",
-      "popularity": 91,
-      "averageRating": 9.4
-    },
-    {
-      "id": 14,
-      "name": "Assassin's Creed Valhalla",
-      "platform": "PC",
-      "genre": "Action",
-      "dateAdded": "2023-01-10",
-      "releaseDate": "2020-11-10",
-      "popularity": 84,
-      "averageRating": 8.1
-    },
-    {
-      "id": 15,
-      "name": "Call of Duty: Modern Warfare",
-      "platform": "PlayStation",
-      "genre": "Shooter",
-      "dateAdded": "2023-02-10",
-      "releaseDate": "2019-10-25",
-      "popularity": 89,
-      "averageRating": 8.8
-    },
-    {
-      "id": 16,
-      "name": "Destiny 2",
-      "platform": "Xbox",
-      "genre": "Shooter",
-      "dateAdded": "2023-03-10",
-      "releaseDate": "2017-09-06",
-      "popularity": 82,
-      "averageRating": 8.0
-    },
-    {
-      "id": 17,
-      "name": "Doom Eternal",
-      "platform": "PC",
-      "genre": "Shooter",
-      "dateAdded": "2023-04-10",
-      "releaseDate": "2020-03-20",
-      "popularity": 80,
-      "averageRating": 8.6
-    },
-    {
-      "id": 18,
-      "name": "FIFA 21",
-      "platform": "PlayStation",
-      "genre": "Sports",
-      "dateAdded": "2023-05-10",
-      "releaseDate": "2020-10-09",
-      "popularity": 83,
-      "averageRating": 7.9
-    },
-    {
-      "id": 19,
-      "name": "Gears 5",
-      "platform": "Xbox",
-      "genre": "Shooter",
-      "dateAdded": "2023-06-10",
-      "releaseDate": "2019-09-10",
-      "popularity": 81,
-      "averageRating": 8.2
-    },
-    {
-      "id": 20,
-      "name": "Hades",
-      "platform": "Nintendo Switch",
-      "genre": "Roguelike",
-      "dateAdded": "2023-07-10",
-      "releaseDate": "2020-09-17",
-      "popularity": 88,
-      "averageRating": 9.0
-    },
-    {
-      "id": 21,
-      "name": "Horizon Zero Dawn",
-      "platform": "PC",
-      "genre": "Action",
-      "dateAdded": "2023-08-10",
-      "releaseDate": "2017-02-28",
-      "popularity": 85,
-      "averageRating": 8.9
-    },
-    {
-      "id": 22,
-      "name": "League of Legends",
-      "platform": "PC",
-      "genre": "MOBA",
-      "dateAdded": "2023-09-10",
-      "releaseDate": "2009-10-27",
-      "popularity": 97,
-      "averageRating": 8.8
-    },
-    {
-      "id": 23,
-      "name": "Mortal Kombat 11",
-      "platform": "PlayStation",
-      "genre": "Fighting",
-      "dateAdded": "2023-10-10",
-      "releaseDate": "2019-04-23",
-      "popularity": 84,
-      "averageRating": 8.4
-    },
-    {
-      "id": 24,
-      "name": "NBA 2K21",
-      "platform": "Xbox",
-      "genre": "Sports",
-      "dateAdded": "2023-11-10",
-      "releaseDate": "2020-09-04",
-      "popularity": 78,
-      "averageRating": 7.5
-    },
-    {
-      "id": 25,
-      "name": "Resident Evil Village",
-      "platform": "PC",
-      "genre": "Horror",
-      "dateAdded": "2023-12-10",
-      "releaseDate": "2021-05-07",
-      "popularity": 87,
-      "averageRating": 9.1
-    },
-    {
-      "id": 26,
-      "name": "Sekiro: Shadows Die Twice",
-      "platform": "PlayStation",
-      "genre": "Action",
-      "dateAdded": "2023-01-20",
-      "releaseDate": "2019-03-22",
-      "popularity": 86,
-      "averageRating": 9.0
-    },
-    {
-      "id": 27,
-      "name": "Spider-Man: Miles Morales",
-      "platform": "PlayStation",
-      "genre": "Action",
-      "dateAdded": "2023-02-20",
-      "releaseDate": "2020-11-12",
-      "popularity": 91,
-      "averageRating": 9.2
-    },
-    {
-      "id": 28,
-      "name": "Super Mario Odyssey",
-      "platform": "Nintendo Switch",
-      "genre": "Platformer",
-      "dateAdded": "2023-03-20",
-      "releaseDate": "2017-10-27",
-      "popularity": 96,
-      "averageRating": 9.7
-    },
-    {
-      "id": 29,
-      "name": "The Last of Us Part II",
-      "platform": "PlayStation",
-      "genre": "Action",
-      "dateAdded": "2023-04-20",
-      "releaseDate": "2020-06-19"
-    }
-  ]
+    "relevance": [
+        { "id": 1, "name": "Relevance", "link": "#" },
+        { "id": 2, "name": "Date added", "link": "#" },
+        { "id": 3, "name": "Name", "link": "#" },
+        { "id": 4, "name": "Release date", "link": "#" },
+        { "id": 5, "name": "Popularity", "link": "#" },
+        { "id": 6, "name": "Average rating", "link": "#" }
+    ],
+
+    "games": [{
+            "id": 1,
+            "name": "The Witcher 3: Wild Hunt",
+            "platform": "PC",
+            "genre": "RPG",
+            "dateAdded": "2023-01-01",
+            "releaseDate": "2015-05-19",
+            "popularity": 95,
+            "averageRating": 9.8,
+            "background_image": "/public/assets/background-image/1.jpg"
+        },
+        {
+            "id": 2,
+            "name": "God of War",
+            "platform": "PlayStation",
+            "genre": "Action",
+            "dateAdded": "2023-02-01",
+            "releaseDate": "2018-04-20",
+            "popularity": 93,
+            "averageRating": 9.6,
+            "background_image": "/public/assets/background-image/2.jpg"
+        },
+        {
+            "id": 3,
+            "name": "Halo Infinite",
+            "platform": "Xbox",
+            "genre": "Shooter",
+            "dateAdded": "2023-03-01",
+            "releaseDate": "2021-12-08",
+            "popularity": 85,
+            "averageRating": 8.7,
+            "background_image": "/public/assets/background-image/3.jpg"
+        },
+        {
+            "id": 4,
+            "name": "Minecraft",
+            "platform": "PC",
+            "genre": "Sandbox",
+            "dateAdded": "2023-01-15",
+            "releaseDate": "2011-11-18",
+            "popularity": 99,
+            "averageRating": 9.5,
+            "background_image": "/public/assets/background-image/4.jpg"
+        },
+        {
+            "id": 5,
+            "name": "Cyberpunk 2077",
+            "platform": "PlayStation",
+            "genre": "RPG",
+            "dateAdded": "2023-04-01",
+            "releaseDate": "2020-12-10",
+            "popularity": 75,
+            "averageRating": 7.8,
+            "background_image": "/public/assets/background-image/5.jpg"
+        },
+        {
+            "id": 6,
+            "name": "Red Dead Redemption 2",
+            "platform": "Xbox",
+            "genre": "Action",
+            "dateAdded": "2023-05-01",
+            "releaseDate": "2018-10-26",
+            "popularity": 92,
+            "averageRating": 9.7,
+            "background_image": "/public/assets/background-image/6.jpg"
+        },
+        {
+            "id": 7,
+            "name": "Fortnite",
+            "platform": "PC",
+            "genre": "Battle Royale",
+            "dateAdded": "2023-06-01",
+            "releaseDate": "2017-07-21",
+            "popularity": 98,
+            "averageRating": 8.5,
+            "background_image": "/public/assets/background-image/7.jpg"
+        },
+        {
+            "id": 8,
+            "name": "Overwatch",
+            "platform": "PlayStation",
+            "genre": "Shooter",
+            "dateAdded": "2023-07-01",
+            "releaseDate": "2016-05-24",
+            "popularity": 88,
+            "averageRating": 8.9,
+            "background_image": "/public/assets/background-image/8.jpg"
+        },
+        {
+            "id": 9,
+            "name": "The Legend of Zelda: Breath of the Wild",
+            "platform": "Nintendo Switch",
+            "genre": "Adventure",
+            "dateAdded": "2023-08-01",
+            "releaseDate": "2017-03-03",
+            "popularity": 94,
+            "averageRating": 9.8,
+            "background_image": "/public/assets/background-image/9.jpg"
+        },
+        {
+            "id": 10,
+            "name": "Apex Legends",
+            "platform": "PC",
+            "genre": "Battle Royale",
+            "dateAdded": "2023-09-01",
+            "releaseDate": "2019-02-04",
+            "popularity": 87,
+            "averageRating": 8.3,
+            "background_image": "/public/assets/background-image/10.jpg"
+        },
+        {
+            "id": 11,
+            "name": "Final Fantasy VII Remake",
+            "platform": "PlayStation",
+            "genre": "RPG",
+            "dateAdded": "2023-10-01",
+            "releaseDate": "2020-04-10",
+            "popularity": 90,
+            "averageRating": 9.2,
+            "background_image": "/public/assets/background-image/1.jpg"
+        },
+        {
+            "id": 12,
+            "name": "Forza Horizon 5",
+            "platform": "Xbox",
+            "genre": "Racing",
+            "dateAdded": "2023-11-01",
+            "releaseDate": "2021-11-09",
+            "popularity": 86,
+            "averageRating": 8.7,
+            "background_image": "/public/assets/background-image/2.jpg"
+        },
+        {
+            "id": 13,
+            "name": "Animal Crossing: New Horizons",
+            "platform": "Nintendo Switch",
+            "genre": "Simulation",
+            "dateAdded": "2023-12-01",
+            "releaseDate": "2020-03-20",
+            "popularity": 91,
+            "averageRating": 9.4,
+            "background_image": "/public/assets/background-image/3.jpg"
+        },
+        {
+            "id": 14,
+            "name": "Assassin's Creed Valhalla",
+            "platform": "PC",
+            "genre": "Action",
+            "dateAdded": "2023-01-10",
+            "releaseDate": "2020-11-10",
+            "popularity": 84,
+            "averageRating": 8.1,
+            "background_image": "/public/assets/background-image/4.jpg"
+        },
+        {
+            "id": 15,
+            "name": "Call of Duty: Modern Warfare",
+            "platform": "PlayStation",
+            "genre": "Shooter",
+            "dateAdded": "2023-02-10",
+            "releaseDate": "2019-10-25",
+            "popularity": 89,
+            "averageRating": 8.8,
+            "background_image": "/public/assets/background-image/5.jpg"
+        },
+        {
+            "id": 16,
+            "name": "Destiny 2",
+            "platform": "Xbox",
+            "genre": "Shooter",
+            "dateAdded": "2023-03-10",
+            "releaseDate": "2017-09-06",
+            "popularity": 82,
+            "averageRating": 8.0,
+            "background_image": "/public/assets/background-image/6.jpg"
+        },
+        {
+            "id": 17,
+            "name": "Doom Eternal",
+            "platform": "PC",
+            "genre": "Shooter",
+            "dateAdded": "2023-04-10",
+            "releaseDate": "2020-03-20",
+            "popularity": 80,
+            "averageRating": 8.6,
+            "background_image": "/public/assets/background-image/7.jpg"
+        },
+        {
+            "id": 18,
+            "name": "FIFA 21",
+            "platform": "PlayStation",
+            "genre": "Sports",
+            "dateAdded": "2023-05-10",
+            "releaseDate": "2020-10-09",
+            "popularity": 83,
+            "averageRating": 7.9,
+            "background_image": "/public/assets/background-image/8.jpg"
+        },
+        {
+            "id": 19,
+            "name": "Gears 5",
+            "platform": "Xbox",
+            "genre": "Shooter",
+            "dateAdded": "2023-06-10",
+            "releaseDate": "2019-09-10",
+            "popularity": 81,
+            "averageRating": 8.2,
+            "background_image": "/public/assets/background-image/9.jpg"
+        },
+        {
+            "id": 20,
+            "name": "Hades",
+            "platform": "Nintendo Switch",
+            "genre": "Roguelike",
+            "dateAdded": "2023-07-10",
+            "releaseDate": "2020-09-17",
+            "popularity": 88,
+            "averageRating": 9.0,
+            "background_image": "/public/assets/background-image/10.jpg"
+        },
+        {
+            "id": 21,
+            "name": "Horizon Zero Dawn",
+            "platform": "PC",
+            "genre": "Action",
+            "dateAdded": "2023-08-10",
+            "releaseDate": "2017-02-28",
+            "popularity": 85,
+            "averageRating": 8.9,
+            "background_image": "/public/assets/background-image/1.jpg"
+        },
+        {
+            "id": 22,
+            "name": "League of Legends",
+            "platform": "PC",
+            "genre": "MOBA",
+            "dateAdded": "2023-09-10",
+            "releaseDate": "2009-10-27",
+            "popularity": 97,
+            "averageRating": 8.8,
+            "background_image": "/public/assets/background-image/2.jpg"
+        },
+        {
+            "id": 23,
+            "name": "Mortal Kombat 11",
+            "platform": "PlayStation",
+            "genre": "Fighting",
+            "dateAdded": "2023-10-10",
+            "releaseDate": "2019-04-23",
+            "popularity": 84,
+            "averageRating": 8.4,
+            "background_image": "/public/assets/background-image/3.jpg"
+        },
+        {
+            "id": 24,
+            "name": "NBA 2K21",
+            "platform": "Xbox",
+            "genre": "Sports",
+            "dateAdded": "2023-11-10",
+            "releaseDate": "2020-09-04",
+            "popularity": 78,
+            "averageRating": 7.5,
+            "background_image": "/public/assets/background-image/4.jpg"
+        },
+        {
+            "id": 25,
+            "name": "Resident Evil Village",
+            "platform": "PC",
+            "genre": "Horror",
+            "dateAdded": "2023-12-10",
+            "releaseDate": "2021-05-07",
+            "popularity": 87,
+            "averageRating": 9.1,
+            "background_image": "/public/assets/background-image/5.jpg"
+        },
+        {
+            "id": 26,
+            "name": "Sekiro: Shadows Die Twice",
+            "platform": "PlayStation",
+            "genre": "Action",
+            "dateAdded": "2023-01-20",
+            "releaseDate": "2019-03-22",
+            "popularity": 86,
+            "averageRating": 9.0,
+            "background_image": "/public/assets/background-image/6.jpg"
+        },
+        {
+            "id": 27,
+            "name": "Spider-Man: Miles Morales",
+            "platform": "PlayStation",
+            "genre": "Action",
+            "dateAdded": "2023-02-20",
+            "releaseDate": "2020-11-12",
+            "popularity": 91,
+            "averageRating": 9.2,
+            "background_image": "/public/assets/background-image/7.jpg"
+        },
+        {
+            "id": 28,
+            "name": "Super Mario Odyssey",
+            "platform": "Nintendo Switch",
+            "genre": "Platformer",
+            "dateAdded": "2023-03-20",
+            "releaseDate": "2017-10-27",
+            "popularity": 96,
+            "averageRating": 9.7,
+            "background_image": "/public/assets/background-image/8.jpg"
+        },
+        {
+            "id": 29,
+            "name": "The Last of Us Part II",
+            "platform": "PlayStation",
+            "genre": "Action",
+            "dateAdded": "2023-04-20",
+            "releaseDate": "2020-06-19",
+            "background_image": "/public/assets/background-image/9.jpg"
+        }
+    ]
 }

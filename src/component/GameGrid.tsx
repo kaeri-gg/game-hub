@@ -1,4 +1,5 @@
 import useGame from "../hook/useGame";
+import GameCard from "./GameCard";
 
 const GameGrid = () => {
   const { games, errors } = useGame();
@@ -8,7 +9,7 @@ const GameGrid = () => {
       {errors && "<span>Error Fetching data.</span>"}
       <ul>
         {games.map((game) => (
-          <li key={game.id}>{game.name}</li>
+          <GameCard key={game.id} game={game}></GameCard>
         ))}
       </ul>
     </>
