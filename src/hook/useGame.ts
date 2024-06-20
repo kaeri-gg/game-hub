@@ -10,7 +10,7 @@ export interface Game {
   id: number;
   name: string;
   background_image: string;
-  parent_platform: Platform[];
+  platform_parent: Platform[];
 }
 
 const useGame = () => {

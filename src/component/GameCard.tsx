@@ -11,7 +11,7 @@ const GameCard = ({ game }: { game: Game }) => {
           <a href="#" className="btn btn-primary">
             Go somewhere
           </a> */}
-          {game.parent_platform.map((platform) => (
+          {game.platform_parent.map((platform) => (
             <p className="card-text" key={platform.id}>
               {platform.platform}
             </p>
