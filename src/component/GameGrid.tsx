@@ -6,12 +6,14 @@ const GameGrid = () => {
 
   return (
     <>
-      {errors && "<span>Error Fetching data.</span>"}
-      <ul>
-        {games.map((game) => (
-          <GameCard key={game.id} game={game}></GameCard>
-        ))}
-      </ul>
+      <p>{errors && "Error Fetching data"}</p>
+      <div className="container">
+        <div className="row justify-content-md-center d-flex flex-flex-wrap">
+          {games.map((game) => (
+            <GameCard key={game.id} game={game}></GameCard>
+          ))}
+        </div>
+      </div>
     </>
   );
 };
