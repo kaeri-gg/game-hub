@@ -1,4 +1,5 @@
 import { Game } from "../hook/useGame";
+import PlatformIcons from "./PlatformIcons";
 
 const GameCard = ({ game }: { game: Game }) => {
   return (
@@ -11,11 +12,7 @@ const GameCard = ({ game }: { game: Game }) => {
           <a href="#" className="btn btn-primary">
             Go somewhere
           </a> */}
-          {game.platform_parent.map((platform) => (
-            <p className="card-text" key={platform.id}>
-              {platform.platform}
-            </p>
-          ))}
+          <PlatformIcons game={game}></PlatformIcons>
         </div>
       </div>
     </div>
