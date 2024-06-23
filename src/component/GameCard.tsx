@@ -1,4 +1,5 @@
 import { Game } from "../hook/useGame";
+import CriticScore from "./CriticScore";
 import PlatformIcons from "./PlatformIcons";
 
 const GameCard = ({ game }: { game: Game }) => {
@@ -12,7 +13,14 @@ const GameCard = ({ game }: { game: Game }) => {
           <a href="#" className="btn btn-primary">
             Go somewhere
           </a> */}
-          <PlatformIcons game={game}></PlatformIcons>
+          <div className="d-flex justify-content-between">
+            <div className="col-11">
+              <PlatformIcons game={game}></PlatformIcons>
+            </div>
+            <div className="col-1">
+              <CriticScore metric={game.metacritic}></CriticScore>
+            </div>
+          </div>
         </div>
       </div>
     </div>
