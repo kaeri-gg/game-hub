@@ -11,7 +11,7 @@ const CriticScore = ({ metric }: Props) => {
 
   return (
     <div>
-      <span className={color}>{metric}</span>
+      <span className={color}> {metric} </span>
     </div>
   );
 };
