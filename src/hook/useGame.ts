@@ -5,6 +5,7 @@ import { CanceledError } from "axios";
 export interface Platform {
   id: number;
   platform: string;
+  slug: string;
 }
 export interface Game {
   id: number;
