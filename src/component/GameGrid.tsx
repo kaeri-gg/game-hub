@@ -1,8 +1,9 @@
 import useGame from "../hook/useGame";
 import GameCard from "./GameCard";
+import Skeletons from "./Skeletons";
 
 const GameGrid = () => {
-  const { games, errors } = useGame();
+  const { games, errors, isLoading } = useGame();
 
   return (
     <>
@@ -13,6 +14,7 @@ const GameGrid = () => {
             <GameCard key={game.id} game={game}></GameCard>
           ))}
         </div>
+        <Skeletons></Skeletons>
       </div>
     </>
   );
