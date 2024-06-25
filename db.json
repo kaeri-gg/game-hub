@@ -13,33 +13,50 @@
   "genres": [
     {
       "id": 1,
-      "img": "https://picsum.photos/32/",
-      "name": "Action",
+      "img": "/public/assets/background-image/1.jpg",
+      "name": "RPG",
       "link": "#"
     },
     {
       "id": 2,
-      "img": "https://picsum.photos/32/",
-      "name": "Indie",
+      "img": "/public/assets/background-image/2.jpg",
+      "name": "Action",
       "link": "#"
     },
     {
       "id": 3,
-      "img": "https://picsum.photos/32/",
-      "name": "Adventure",
+      "img": "/public/assets/background-image/3.jpg",
+      "name": "Shooter",
       "link": "#"
     },
-    { "id": 4, "img": "https://picsum.photos/32/", "name": "RPG", "link": "#" },
+    {
+      "id": 4,
+      "img": "/public/assets/background-image/4.jpg",
+      "name": "Sandbox",
+      "link": "#"
+    },
     {
       "id": 5,
-      "img": "https://picsum.photos/32/",
-      "name": "Strategy",
+      "img": "/public/assets/background-image/5.jpg",
+      "name": "Battle Royale",
       "link": "#"
     },
     {
       "id": 6,
-      "img": "https://picsum.photos/32/",
-      "name": "Shooter",
+      "img": "/public/assets/background-image/6.jpg",
+      "name": "Adventure",
+      "link": "#"
+    },
+    {
+      "id": 7,
+      "img": "/public/assets/background-image/2.jpg",
+      "name": "Racing",
+      "link": "#"
+    },
+    {
+      "id": 8,
+      "img": "/public/assets/background-image/3.jpg",
+      "name": "Roguelike",
       "link": "#"
     }
   ],
