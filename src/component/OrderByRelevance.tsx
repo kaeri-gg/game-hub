@@ -1,13 +1,7 @@
-interface Props {
-  id: number;
-  name: string;
-  link: string;
-}
+import useGame from "../hook/useGame";
 
-interface Relevance {
-  relevances: Props[];
-}
-const OrderByRelevance = ({ relevances }: Relevance) => {
+const OrderByRelevance = () => {
+  const { relevances } = useGame();
   return (
     <div className="dropdown ms-3">
       <button

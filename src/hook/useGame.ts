@@ -22,9 +22,16 @@ export interface Game {
   platform_parent: Platform[];
 }
 
+export interface Relevance {
+  id: number;
+  name: string;
+  link: string;
+}
+
 const useGame = () => {
   const [games, setGames] = useState<Game[]>([]);
   const [genres, setGenre] = useState<Genre[]>([]);
+  const [relevances, setRelevances] = useState<Relevance[]>([]);
   const [platforms, setPlatforms] = useState<Platform[]>([]);
   const [errors, setErrors] = useState("");
   const [isLoading, setLoading] = useState(false);
@@ -64,6 +71,16 @@ const useGame = () => {
           setPlatforms(resPlatform.data);
           setLoading(false);
         }
+
+        // fetching relevances
+        const resRelevances = await apiClient.get<Relevance[]>("/relevances", {
+          signal: controller.signal,
+        });
+
+        if (resRelevances.data) {
+          setRelevances(resRelevances.data);
+          setLoading(false);
+        }
       } catch (err: unknown) {
         if (err instanceof CanceledError) return;
         if (axios.isCancel(err)) return;
@@ -81,7 +98,7 @@ const useGame = () => {
     return () => controller.abort();
   }, []);
 
-  return { games, errors, isLoading, genres, platforms };
+  return { games, errors, isLoading, genres, platforms, relevances };
 };
 
 export default useGame;
