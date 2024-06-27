@@ -5,17 +5,10 @@ import PageTitle from "./component/PageTitle";
 import Platforms from "./component/Platforms";
 import OrderByRelevance from "./component/OrderByRelevance";
 import GameGrid from "./component/GameGrid";
+import "./style.scss";
 
 function App() {
   const [pageTitle, setPageTitle] = useState("Games");
-  const [genres, setGenre] = useState([
-    { id: 1, img: "https://picsum.photos/32/", name: "Action", link: "#" },
-    { id: 2, img: "https://picsum.photos/32/", name: "Indie", link: "#" },
-    { id: 3, img: "https://picsum.photos/32/", name: "Adventure", link: "#" },
-    { id: 4, img: "https://picsum.photos/32/", name: "RPG", link: "#" },
-    { id: 5, img: "https://picsum.photos/32/", name: "Strategy", link: "#" },
-    { id: 6, img: "https://picsum.photos/32/", name: "Shooter", link: "#" },
-  ]);
 
   const [platforms, setPlatforms] = useState([
     { id: 1, name: "PC", link: "#" },
@@ -25,10 +18,6 @@ function App() {
     { id: 5, name: "Android", link: "#" },
     { id: 6, name: "Apple Macintosh", link: "#" },
   ]);
-
-  const visibleGenre = (name: string) => {
-    setPageTitle(name);
-  };
 
   const [relevances, setRelevances] = useState([
     { id: 1, name: "Relevance", link: "#" },
@@ -46,7 +35,7 @@ function App() {
       </div>
       <div className="container-fluid d-flex">
         <div className="col-2">
-          <Genre genres={genres} onClick={(name) => visibleGenre(name)}></Genre>
+          <Genre></Genre>
         </div>
         <div className="col-10">
           <PageTitle name={pageTitle}></PageTitle>
