@@ -1,13 +1,7 @@
-interface Props {
-  id: number;
-  name: string;
-  link: string;
-}
+import useGame from "../hook/useGame";
 
-interface Platform {
-  platforms: Props[];
-}
-const Platforms = ({ platforms }: Platform) => {
+const Platforms = () => {
+  const { platforms } = useGame();
   return (
     <div className="dropdown">
       <button
