@@ -1,15 +1,8 @@
-interface Children {
-  id: number;
-  name: string;
-  img: string;
-  link: string;
-}
+import useGame from "../hook/useGame";
 
-interface Genre {
-  genres: Children[];
-  onClick: (name: string) => void;
-}
-const Genre = ({ genres, onClick }: Genre) => {
+const Genre = () => {
+  const { genres } = useGame();
+
   return (
     <>
       <div className="">
@@ -17,12 +10,10 @@ const Genre = ({ genres, onClick }: Genre) => {
         <div className="grid gap-0 row-gap-3">
           {genres.map((genre) => (
             <div className="p-2 g-col-6 d-flex" key={genre.id}>
-              <img src={genre.img} className="img-fluid me-3" />
-              <a
-                className="align-content-center"
-                href={genre.link}
-                onClick={() => onClick(genre.name)}
-              >
+              <div className="custom-genre-container">
+                <img src={genre.img} className="rounded me-3" />
+              </div>
+              <a className="align-content-center" href={genre.link}>
                 {" "}
                 {genre.name}
               </a>
