@@ -10,8 +10,8 @@ export interface Genre {
 }
 export interface Platform {
   id: number;
-  platform: string;
-  slug: string;
+  name: string;
+  link: string;
 }
 
 export interface Game {
@@ -25,6 +25,7 @@ export interface Game {
 const useGame = () => {
   const [games, setGames] = useState<Game[]>([]);
   const [genres, setGenre] = useState<Genre[]>([]);
+  const [platforms, setPlatforms] = useState<Platform[]>([]);
   const [errors, setErrors] = useState("");
   const [isLoading, setLoading] = useState(false);
 
@@ -34,6 +35,7 @@ const useGame = () => {
     const fetchData = async () => {
       setLoading(true);
       try {
+        // fetching games
         const resGames = await apiClient.get<Game[]>("/games", {
           signal: controller.signal,
         });
@@ -43,13 +45,23 @@ const useGame = () => {
           setLoading(false);
         }
 
+        // fetching genre
         const resGenre = await apiClient.get<Genre[]>("/genres", {
           signal: controller.signal,
         });
 
         if (resGenre.data) {
-          console.log("kath : ", resGenre.data);
           setGenre(resGenre.data);
+          setLoading(false);
+        }
+
+        // fetching platforms
+        const resPlatform = await apiClient.get<Platform[]>("/platforms", {
+          signal: controller.signal,
+        });
+
+        if (resPlatform.data) {
+          setPlatforms(resPlatform.data);
           setLoading(false);
         }
       } catch (err: unknown) {
@@ -69,7 +81,7 @@ const useGame = () => {
     return () => controller.abort();
   }, []);
 
-  return { games, errors, isLoading, genres };
+  return { games, errors, isLoading, genres, platforms };
 };
 
 export default useGame;

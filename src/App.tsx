@@ -10,15 +10,6 @@ import "./style.scss";
 function App() {
   const [pageTitle, setPageTitle] = useState("Games");
 
-  const [platforms, setPlatforms] = useState([
-    { id: 1, name: "PC", link: "#" },
-    { id: 2, name: "Xbox", link: "#" },
-    { id: 3, name: "PlayStation", link: "#" },
-    { id: 4, name: "IOS", link: "#" },
-    { id: 5, name: "Android", link: "#" },
-    { id: 6, name: "Apple Macintosh", link: "#" },
-  ]);
-
   const [relevances, setRelevances] = useState([
     { id: 1, name: "Relevance", link: "#" },
     { id: 2, name: "Date added", link: "#" },
@@ -40,7 +31,7 @@ function App() {
         <div className="col-10">
           <PageTitle name={pageTitle}></PageTitle>
           <div className="d-flex">
-            <Platforms platforms={platforms}></Platforms>
+            <Platforms></Platforms>
             <OrderByRelevance relevances={relevances}></OrderByRelevance>
           </div>
           <div className="d-flex">
