@@ -1,7 +1,8 @@
-import useGame from "../hook/useGame";
+import usePlatform from "../hook/usePlatform";
 
 const Platforms = () => {
-  const { platforms } = useGame();
+  const { platforms } = usePlatform();
+
   return (
     <div className="dropdown">
       <button
