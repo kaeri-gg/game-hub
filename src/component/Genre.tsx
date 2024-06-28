@@ -1,7 +1,7 @@
-import useGame from "../hook/useGame";
+import useGenres from "../hook/useGenres";
 
 const Genre = () => {
-  const { genres } = useGame();
+  const { genres } = useGenres();
 
   return (
     <>

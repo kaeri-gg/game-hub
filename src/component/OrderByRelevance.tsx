@@ -1,7 +1,7 @@
-import useGame from "../hook/useGame";
+import useRelevances from "../hook/useRelevance";
 
 const OrderByRelevance = () => {
-  const { relevances } = useGame();
+  const { relevances } = useRelevances();
   return (
     <div className="dropdown ms-3">
       <button
