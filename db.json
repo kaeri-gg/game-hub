@@ -65,7 +65,7 @@
     { "id": 3, "name": "Name", "link": "#" },
     { "id": 4, "name": "Release date", "link": "#" },
     { "id": 5, "name": "Popularity", "link": "#" },
-    { "id": 6, "name": "Average rating", "link": "#" }
+    { "id": 6, "name": "Average ratings", "link": "#" }
   ],
 
   "games": [
