@@ -1,6 +1,11 @@
-import useGenres from "../hook/useGenres";
+import { Button } from "@chakra-ui/react";
+import useGenres, { Genre } from "../hook/useGenres";
 
-const Genre = () => {
+interface Props {
+  onSelectGenre: (genre: Genre) => void;
+}
+
+const GenreList = ({ onSelectGenre }: Props) => {
   const { genres } = useGenres();
 
   return (
@@ -13,10 +18,16 @@ const Genre = () => {
               <div className="custom-genre-container">
                 <img src={genre.img} className="rounded me-3" />
               </div>
-              <a className="align-content-center" href={genre.link}>
+              <Button
+                variant="link"
+                onClick={() => {
+                  console.log("Selected Genre:", genre);
+                  onSelectGenre(genre);
+                }}
+              >
                 {" "}
                 {genre.name}
-              </a>
+              </Button>
             </div>
           ))}
         </div>
@@ -25,4 +36,4 @@ const Genre = () => {
   );
 };
 
-export default Genre;
+export default GenreList;

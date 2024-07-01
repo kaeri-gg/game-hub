@@ -7,8 +7,14 @@ export interface Genre {
   link: string;
 }
 
-const useGenres = (endpoint: string = "/genres") => {
-  const { data: genres, error, isLoading } = useData<Genre>(endpoint);
+const useGenres = (selectedGenre?: Genre | null) => {
+  const {
+    data: genres,
+    error,
+    isLoading,
+  } = useData<Genre>("/genres", { params: { genres: selectedGenre?.id } }, [
+    selectedGenre?.id,
+  ]);
   return { error, isLoading, genres };
 };
 
