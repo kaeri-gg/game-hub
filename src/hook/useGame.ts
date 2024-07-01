@@ -12,8 +12,23 @@ export interface Game {
   platform_parent: Platform[];
 }
 
-const useGame = (endpoint: string = "/games") => {
-  const { data: games, error, isLoading } = useData<Game>(endpoint);
+export interface Filter {
+  genre?: string;
+  platform?: string;
+}
+
+const useGame = (params?: Filter) => {
+  const {
+    data: games,
+    error,
+    isLoading,
+  } = useData<Game>(
+    "/games",
+    {
+      params,
+    },
+    [params?.genre, params?.platform]
+  );
   return { games, error, isLoading };
 };
 

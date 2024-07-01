@@ -7,8 +7,8 @@ export interface Genre {
   link: string;
 }
 
-const useGenres = (endpoint: string = "/genres") => {
-  const { data: genres, error, isLoading } = useData<Genre>(endpoint);
+const useGenres = () => {
+  const { data: genres, error, isLoading } = useData<Genre>("/genres");
   return { error, isLoading, genres };
 };
 
