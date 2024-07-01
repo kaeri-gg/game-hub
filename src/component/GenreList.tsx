@@ -21,7 +21,7 @@ const GenreList = ({ onSelectGenre }: Props) => {
               <Button
                 variant="link"
                 onClick={() => {
-                  console.log("Selected Genre:", genre);
+                  console.log("Selected Genre:", genre.name);
                   onSelectGenre(genre);
                 }}
               >

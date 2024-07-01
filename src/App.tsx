@@ -10,7 +10,9 @@ import "./style.scss";
 
 function App() {
   const [pageTitle, setPageTitle] = useState("Games");
-  const [selectedGenre, setSelectedGenre] = useState<Genre | null>(null);
+  const [selectedGenre, setSelectedGenre] = useState<Genre | undefined>(
+    undefined
+  );
 
   return (
     <>
