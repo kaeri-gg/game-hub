@@ -2,12 +2,12 @@ import useData from "./useData";
 
 export interface Platform {
   id: number;
-  name: string;
-  link: string;
+  platform: string;
+  slug: string;
 }
 
-const usePlatform = (endpoint: string = "/platforms") => {
-  const { data: platforms, error, isLoading } = useData<Platform>(endpoint);
+const usePlatform = () => {
+  const { data: platforms, error, isLoading } = useData<Platform>("/platforms");
   return { error, isLoading, platforms };
 };
 

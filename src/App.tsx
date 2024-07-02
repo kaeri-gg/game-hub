@@ -5,7 +5,8 @@ import PageTitle from "./component/PageTitle";
 import Platforms from "./component/Platforms";
 import OrderByRelevance from "./component/OrderByRelevance";
 import GameGrid from "./component/GameGrid";
-import { Genre } from "./hook/useGenres";
+import { Genre } from "./hook/useGenre";
+import { Platform } from "./hook/usePlatform";
 import "./style.scss";
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
   const [selectedGenre, setSelectedGenre] = useState<Genre | undefined>(
     undefined
   );
+  const [selectedPlatform, setSelectedPlatform] = useState<Platform>();
 
   return (
     <>
@@ -28,11 +30,16 @@ function App() {
         <div className="col-10">
           <PageTitle name={pageTitle}></PageTitle>
           <div className="d-flex">
-            <Platforms></Platforms>
+            <Platforms
+              onSelectedPlatform={(platform) => setSelectedPlatform(platform)}
+            ></Platforms>
             <OrderByRelevance></OrderByRelevance>
           </div>
           <div className="d-flex">
-            <GameGrid selectedGenre={selectedGenre}></GameGrid>
+            <GameGrid
+              selectedGenre={selectedGenre}
+              selectedPlatform={selectedPlatform}
+            ></GameGrid>
           </div>
         </div>
       </div>

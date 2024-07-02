@@ -1,12 +1,12 @@
 import { Button } from "@chakra-ui/react";
-import useGenres, { Genre } from "../hook/useGenres";
+import useGenre, { Genre } from "../hook/useGenre";
 
 interface Props {
   onSelectGenre: (genre: Genre) => void;
 }
 
 const GenreList = ({ onSelectGenre }: Props) => {
-  const { genres } = useGenres();
+  const { genres } = useGenre();
 
   return (
     <>
