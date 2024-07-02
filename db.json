@@ -51,12 +51,13 @@
   ],
 
   "platforms": [
-    { "id": 1, "name": "PC", "link": "#" },
-    { "id": 2, "name": "Xbox", "link": "#" },
-    { "id": 3, "name": "PlayStation", "link": "#" },
-    { "id": 4, "name": "IOS", "link": "#" },
-    { "id": 5, "name": "Android", "link": "#" },
-    { "id": 6, "name": "Apple Macintosh", "link": "#" }
+    { "id": 1, "platform": "PC", "slug": "pc" },
+    { "id": 2, "platform": "Xbox", "slug": "xbox" },
+    { "id": 3, "platform": "PlayStation", "slug": "playstation" },
+    { "id": 4, "platform": "IOS", "slug": "ios" },
+    { "id": 5, "platform": "Android", "slug": "android" },
+    { "id": 6, "platform": "Apple Macintosh", "slug": "applemacintosh" },
+    { "id": 7, "platform": "Nintendo Switch", "slug": "nintendo" }
   ],
 
   "relevances": [
@@ -72,7 +73,7 @@
     {
       "id": 1,
       "name": "The Witcher 3: Wild Hunt",
-      "platform_parent": [
+      "platforms": [
         { "id": 1, "platform": "PC", "slug": "pc" },
         { "id": 2, "platform": "PlayStation", "slug": "playstation" },
         { "id": 3, "platform": "Xbox", "slug": "xbox" },
@@ -89,7 +90,7 @@
     {
       "id": 2,
       "name": "God of War",
-      "platform_parent": [
+      "platforms": [
         { "id": 1, "platform": "PlayStation", "slug": "playstation" },
         { "id": 2, "platform": "PC", "slug": "pc" },
         { "id": 3, "platform": "Xbox", "slug": "xbox" }
@@ -105,7 +106,7 @@
     {
       "id": 3,
       "name": "Halo Infinite",
-      "platform_parent": [
+      "platforms": [
         { "id": 1, "platform": "Xbox", "slug": "xbox" },
         { "id": 2, "platform": "PC", "slug": "pc" },
         { "id": 3, "platform": "PlayStation", "slug": "playstation" }
@@ -121,7 +122,7 @@
     {
       "id": 4,
       "name": "Minecraft",
-      "platform_parent": [
+      "platforms": [
         { "id": 1, "platform": "PC", "slug": "pc" },
         { "id": 2, "platform": "PlayStation", "slug": "playstation" },
         { "id": 3, "platform": "Xbox", "slug": "xbox" },
@@ -139,7 +140,7 @@
     {
       "id": 5,
       "name": "Cyberpunk 2077",
-      "platform_parent": [
+      "platforms": [
         { "id": 1, "platform": "PlayStation", "slug": "playstation" },
         { "id": 2, "platform": "PC", "slug": "pc" },
         { "id": 3, "platform": "Xbox", "slug": "xbox" }
@@ -155,7 +156,7 @@
     {
       "id": 6,
       "name": "Red Dead Redemption 2",
-      "platform_parent": [
+      "platforms": [
         { "id": 1, "platform": "Xbox", "slug": "xbox" },
         { "id": 2, "platform": "PC", "slug": "pc" },
         { "id": 3, "platform": "PlayStation", "slug": "playstation" }
@@ -171,7 +172,7 @@
     {
       "id": 7,
       "name": "Fortnite",
-      "platform_parent": [
+      "platforms": [
         { "id": 1, "platform": "PC", "slug": "pc" },
         { "id": 2, "platform": "PlayStation", "slug": "playstation" },
         { "id": 3, "platform": "Xbox", "slug": "xbox" },
@@ -189,7 +190,7 @@
     {
       "id": 8,
       "name": "Overwatch",
-      "platform_parent": [
+      "platforms": [
         { "id": 1, "platform": "PlayStation", "slug": "playstation" },
         { "id": 2, "platform": "PC", "slug": "pc" },
         { "id": 3, "platform": "Xbox", "slug": "xbox" },
@@ -206,7 +207,7 @@
     {
       "id": 9,
       "name": "The Legend of Zelda: Breath of the Wild",
-      "platform_parent": [
+      "platforms": [
         { "id": 1, "platform": "Nintendo Switch", "slug": "nintendo" }
       ],
       "genre": "Adventure",
@@ -220,7 +221,7 @@
     {
       "id": 10,
       "name": "Apex Legends",
-      "platform_parent": [
+      "platforms": [
         { "id": 1, "platform": "PC", "slug": "pc" },
         { "id": 2, "platform": "PlayStation", "slug": "playstation" },
         { "id": 3, "platform": "Xbox", "slug": "xbox" }
@@ -236,7 +237,7 @@
     {
       "id": 11,
       "name": "Final Fantasy VII Remake",
-      "platform_parent": [
+      "platforms": [
         { "id": 1, "platform": "PlayStation", "slug": "playstation" },
         { "id": 2, "platform": "PC", "slug": "pc" }
       ],
@@ -251,7 +252,7 @@
     {
       "id": 12,
       "name": "Forza Horizon 5",
-      "platform_parent": [
+      "platforms": [
         { "id": 1, "platform": "Xbox", "slug": "xbox" },
         { "id": 2, "platform": "PC", "slug": "pc" }
       ],
@@ -266,7 +267,7 @@
     {
       "id": 13,
       "name": "Hades",
-      "platform_parent": [
+      "platforms": [
         { "id": 1, "platform": "PC", "slug": "pc" },
         { "id": 2, "platform": "Nintendo Switch", "slug": "nintendo" },
         { "id": 3, "platform": "PlayStation", "slug": "playstation" },

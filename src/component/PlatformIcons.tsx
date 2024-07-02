@@ -25,7 +25,7 @@ const PlatformIcons = ({ game }: { game: Game }) => {
 
   return (
     <div className="d-flex">
-      {game.platform_parent.map((platform) => (
+      {game.platforms.map((platform) => (
         <p className="card-text col-1" key={platform.id}>
           {/* {platform.platform} */}
           <Icon as={iconMap[platform.slug]} color="gray.500"></Icon>

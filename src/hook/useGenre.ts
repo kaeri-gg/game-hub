@@ -7,9 +7,9 @@ export interface Genre {
   link: string;
 }
 
-const useGenres = () => {
+const useGenre = () => {
   const { data: genres, error, isLoading } = useData<Genre>("/genres");
   return { error, isLoading, genres };
 };
 
-export default useGenres;
+export default useGenre;

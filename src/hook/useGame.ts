@@ -1,15 +1,11 @@
 import useData from "./useData";
-export interface Platform {
-  id: number;
-  name: string;
-  link: string;
-}
+import { Platform } from "./usePlatform";
 export interface Game {
   id: number;
   name: string;
   background_image: string;
   metacritic: number;
-  platform_parent: Platform[];
+  platforms: Platform[];
 }
 
 export interface Filter {

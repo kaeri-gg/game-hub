@@ -1,7 +1,25 @@
-import usePlatform from "../hook/usePlatform";
+import usePlatform, { Platform } from "../hook/usePlatform";
+import { useState } from "react";
 
-const Platforms = () => {
+interface Props {
+  onSelectedPlatform: (platform: Platform) => void;
+}
+
+const Platforms = ({ onSelectedPlatform }: Props) => {
   const { platforms } = usePlatform();
+  const [selected, setSelected] = useState<string>("All");
+
+  // const handleFilter = (platform: Platform) => {
+  //   return () => {
+  //     console.log("Selected Platform: ", platform.platform);
+  //     onSelectedPlatform(platform);
+  //   };
+  // };
+
+  // const handleFilter = (platform: Platform) => () => {
+  //   console.log("Selected Platform: ", platform.platform);
+  //   onSelectedPlatform(platform);
+  // };
 
   return (
     <div className="dropdown">
@@ -11,16 +29,28 @@ const Platforms = () => {
         data-bs-toggle="dropdown"
         aria-expanded="false"
       >
-        Platforms
+        Platforms ({selected})
       </button>
       <ul className="dropdown-menu">
-        {platforms.map((platform) => (
-          <li key={platform.id}>
-            <a className="dropdown-item" href={platform.link}>
-              {platform.name}
-            </a>
-          </li>
-        ))}
+        {platforms.map((platform) => {
+          const handleFilter = () => {
+            console.log("Selected Platform: ", platform.platform);
+            onSelectedPlatform(platform);
+            setSelected(platform.platform);
+          };
+
+          return (
+            <li key={platform.id}>
+              <a
+                className="dropdown-item"
+                href={"#" + platform.slug}
+                onClick={handleFilter}
+              >
+                {platform.platform}
+              </a>
+            </li>
+          );
+        })}
       </ul>
     </div>
   );
