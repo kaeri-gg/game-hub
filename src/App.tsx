@@ -24,6 +24,7 @@ function App() {
       <div className="container-fluid d-flex">
         <div className="col-2">
           <GenreList
+            selectedGenre={selectedGenre}
             onSelectGenre={(genre) => setSelectedGenre(genre)}
           ></GenreList>
         </div>
