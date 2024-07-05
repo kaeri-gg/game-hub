@@ -10,7 +10,7 @@ import { Platform } from "./hook/usePlatform";
 import "./style.scss";
 
 function App() {
-  const [pageTitle, setPageTitle] = useState("Games");
+  const [pageTitle] = useState("Games");
   const [selectedGenre, setSelectedGenre] = useState<Genre | undefined>(
     undefined
   );
