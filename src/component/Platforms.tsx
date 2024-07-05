@@ -1,5 +1,7 @@
+import { Button, Menu, MenuButton, MenuItem, MenuList } from "@chakra-ui/react";
 import usePlatform, { Platform } from "../hook/usePlatform";
 import { useState } from "react";
+import { BsChevronDown } from "react-icons/bs";
 
 interface Props {
   onSelectedPlatform: (platform: Platform) => void;
@@ -22,16 +24,11 @@ const Platforms = ({ onSelectedPlatform }: Props) => {
   // };
 
   return (
-    <div className="dropdown">
-      <button
-        className="btn btn-secondary dropdown-toggle"
-        type="button"
-        data-bs-toggle="dropdown"
-        aria-expanded="false"
-      >
+    <Menu>
+      <MenuButton as={Button} rightIcon={<BsChevronDown />}>
         Platforms ({selected})
-      </button>
-      <ul className="dropdown-menu">
+      </MenuButton>
+      <MenuList>
         {platforms.map((platform) => {
           const handleFilter = () => {
             console.log("Selected Platform: ", platform.platform);
@@ -40,7 +37,7 @@ const Platforms = ({ onSelectedPlatform }: Props) => {
           };
 
           return (
-            <li key={platform.id}>
+            <MenuItem key={platform.id}>
               <a
                 className="dropdown-item"
                 href={"#" + platform.slug}
@@ -48,11 +45,11 @@ const Platforms = ({ onSelectedPlatform }: Props) => {
               >
                 {platform.platform}
               </a>
-            </li>
+            </MenuItem>
           );
         })}
-      </ul>
-    </div>
+      </MenuList>
+    </Menu>
   );
 };
 
