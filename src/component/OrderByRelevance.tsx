@@ -1,27 +1,24 @@
-import useRelevances from "../hook/useRelevance";
+import { Menu, MenuButton, Button, MenuList, MenuItem } from '@chakra-ui/react';
+import { BsChevronDown } from 'react-icons/bs';
+import useRelevances from '../hook/useRelevance';
 
 const OrderByRelevance = () => {
   const { relevances } = useRelevances();
   return (
-    <div className="dropdown ms-3">
-      <button
-        className="btn btn-secondary dropdown-toggle"
-        type="button"
-        data-bs-toggle="dropdown"
-        aria-expanded="false"
-      >
+    <Menu>
+      <MenuButton as={Button} rightIcon={<BsChevronDown />} ml={2}>
         Order by Relevance
-      </button>
-      <ul className="dropdown-menu">
-        {relevances.map((relevance) => (
-          <li key={relevance.id}>
+      </MenuButton>
+      <MenuList>
+        {relevances.map(relevance => (
+          <MenuItem key={relevance.id}>
             <a className="dropdown-item" href={relevance.link}>
               {relevance.name}
             </a>
-          </li>
+          </MenuItem>
         ))}
-      </ul>
-    </div>
+      </MenuList>
+    </Menu>
   );
 };
 

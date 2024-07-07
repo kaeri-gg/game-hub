@@ -51,22 +51,20 @@
   ],
 
   "platforms": [
-    { "id": 1, "platform": "PC", "slug": "pc" },
-    { "id": 2, "platform": "Xbox", "slug": "xbox" },
-    { "id": 3, "platform": "PlayStation", "slug": "playstation" },
-    { "id": 4, "platform": "IOS", "slug": "ios" },
-    { "id": 5, "platform": "Android", "slug": "android" },
-    { "id": 6, "platform": "Apple Macintosh", "slug": "applemacintosh" },
-    { "id": 7, "platform": "Nintendo Switch", "slug": "nintendo" }
+    { "id": 1, "name": "PC", "slug": "pc" },
+    { "id": 2, "name": "Xbox", "slug": "xbox" },
+    { "id": 3, "name": "PlayStation", "slug": "playstation" },
+    { "id": 4, "name": "IOS", "slug": "ios" },
+    { "id": 5, "name": "Android", "slug": "android" },
+    { "id": 6, "name": "Apple Macintosh", "slug": "applemacintosh" },
+    { "id": 7, "name": "Nintendo Switch", "slug": "nintendo" }
   ],
 
   "relevances": [
-    { "id": 1, "name": "Relevance", "link": "#" },
-    { "id": 2, "name": "Date added", "link": "#" },
-    { "id": 3, "name": "Name", "link": "#" },
-    { "id": 4, "name": "Release date", "link": "#" },
-    { "id": 5, "name": "Popularity", "link": "#" },
-    { "id": 6, "name": "Average ratings", "link": "#" }
+    { "id": 1, "name": "Date added", "slug": "dateAdded" },
+    { "id": 3, "name": "Release date", "slug": "releaseDate" },
+    { "id": 4, "name": "Popularity", "slug": "popularity" },
+    { "id": 5, "name": "Average ratings", "slug": "averageRatings" }
   ],
 
   "games": [
@@ -74,10 +72,10 @@
       "id": 1,
       "name": "The Witcher 3: Wild Hunt",
       "platforms": [
-        { "id": 1, "platform": "PC", "slug": "pc" },
-        { "id": 2, "platform": "PlayStation", "slug": "playstation" },
-        { "id": 3, "platform": "Xbox", "slug": "xbox" },
-        { "id": 4, "platform": "Nintendo Switch", "slug": "nintendo" }
+        { "id": 1, "name": "PC", "slug": "pc" },
+        { "id": 2, "name": "PlayStation", "slug": "playstation" },
+        { "id": 3, "name": "Xbox", "slug": "xbox" },
+        { "id": 4, "name": "Nintendo Switch", "slug": "nintendo" }
       ],
       "genre": "RPG",
       "dateAdded": "2023-01-01",
@@ -91,9 +89,9 @@
       "id": 2,
       "name": "God of War",
       "platforms": [
-        { "id": 1, "platform": "PlayStation", "slug": "playstation" },
-        { "id": 2, "platform": "PC", "slug": "pc" },
-        { "id": 3, "platform": "Xbox", "slug": "xbox" }
+        { "id": 1, "name": "PlayStation", "slug": "playstation" },
+        { "id": 2, "name": "PC", "slug": "pc" },
+        { "id": 3, "name": "Xbox", "slug": "xbox" }
       ],
       "genre": "Action",
       "dateAdded": "2023-02-01",
@@ -107,9 +105,9 @@
       "id": 3,
       "name": "Halo Infinite",
       "platforms": [
-        { "id": 1, "platform": "Xbox", "slug": "xbox" },
-        { "id": 2, "platform": "PC", "slug": "pc" },
-        { "id": 3, "platform": "PlayStation", "slug": "playstation" }
+        { "id": 1, "name": "Xbox", "slug": "xbox" },
+        { "id": 2, "name": "PC", "slug": "pc" },
+        { "id": 3, "name": "PlayStation", "slug": "playstation" }
       ],
       "genre": "Shooter",
       "dateAdded": "2023-03-01",
@@ -123,11 +121,11 @@
       "id": 4,
       "name": "Minecraft",
       "platforms": [
-        { "id": 1, "platform": "PC", "slug": "pc" },
-        { "id": 2, "platform": "PlayStation", "slug": "playstation" },
-        { "id": 3, "platform": "Xbox", "slug": "xbox" },
-        { "id": 4, "platform": "Nintendo Switch", "slug": "nintendo" },
-        { "id": 5, "platform": "Apple Macintosh", "slug": "applemacintosh" }
+        { "id": 1, "name": "PC", "slug": "pc" },
+        { "id": 2, "name": "PlayStation", "slug": "playstation" },
+        { "id": 3, "name": "Xbox", "slug": "xbox" },
+        { "id": 4, "name": "Nintendo Switch", "slug": "nintendo" },
+        { "id": 5, "name": "Apple Macintosh", "slug": "applemacintosh" }
       ],
       "genre": "Sandbox",
       "dateAdded": "2023-01-15",
@@ -141,9 +139,9 @@
       "id": 5,
       "name": "Cyberpunk 2077",
       "platforms": [
-        { "id": 1, "platform": "PlayStation", "slug": "playstation" },
-        { "id": 2, "platform": "PC", "slug": "pc" },
-        { "id": 3, "platform": "Xbox", "slug": "xbox" }
+        { "id": 1, "name": "PlayStation", "slug": "playstation" },
+        { "id": 2, "name": "PC", "slug": "pc" },
+        { "id": 3, "name": "Xbox", "slug": "xbox" }
       ],
       "genre": "RPG",
       "dateAdded": "2023-04-01",
@@ -157,9 +155,9 @@
       "id": 6,
       "name": "Red Dead Redemption 2",
       "platforms": [
-        { "id": 1, "platform": "Xbox", "slug": "xbox" },
-        { "id": 2, "platform": "PC", "slug": "pc" },
-        { "id": 3, "platform": "PlayStation", "slug": "playstation" }
+        { "id": 1, "name": "Xbox", "slug": "xbox" },
+        { "id": 2, "name": "PC", "slug": "pc" },
+        { "id": 3, "name": "PlayStation", "slug": "playstation" }
       ],
       "genre": "Action",
       "dateAdded": "2023-05-01",
@@ -173,11 +171,11 @@
       "id": 7,
       "name": "Fortnite",
       "platforms": [
-        { "id": 1, "platform": "PC", "slug": "pc" },
-        { "id": 2, "platform": "PlayStation", "slug": "playstation" },
-        { "id": 3, "platform": "Xbox", "slug": "xbox" },
-        { "id": 4, "platform": "IOS", "slug": "ios" },
-        { "id": 5, "platform": "Android", "slug": "android" }
+        { "id": 1, "name": "PC", "slug": "pc" },
+        { "id": 2, "name": "PlayStation", "slug": "playstation" },
+        { "id": 3, "name": "Xbox", "slug": "xbox" },
+        { "id": 4, "name": "IOS", "slug": "ios" },
+        { "id": 5, "name": "Android", "slug": "android" }
       ],
       "genre": "Battle Royale",
       "dateAdded": "2023-06-01",
@@ -191,10 +189,10 @@
       "id": 8,
       "name": "Overwatch",
       "platforms": [
-        { "id": 1, "platform": "PlayStation", "slug": "playstation" },
-        { "id": 2, "platform": "PC", "slug": "pc" },
-        { "id": 3, "platform": "Xbox", "slug": "xbox" },
-        { "id": 4, "platform": "Nintendo Switch", "slug": "nintendo" }
+        { "id": 1, "name": "PlayStation", "slug": "playstation" },
+        { "id": 2, "name": "PC", "slug": "pc" },
+        { "id": 3, "name": "Xbox", "slug": "xbox" },
+        { "id": 4, "name": "Nintendo Switch", "slug": "nintendo" }
       ],
       "genre": "Shooter",
       "dateAdded": "2023-07-01",
@@ -207,7 +205,7 @@
     {
       "id": 9,
       "name": "The Legend of Zelda: Breath of the Wild",
-      "platforms": [{ "id": 1, "platform": "Nintendo Switch", "slug": "nintendo" }],
+      "platforms": [{ "id": 1, "name": "Nintendo Switch", "slug": "nintendo" }],
       "genre": "Adventure",
       "dateAdded": "2023-08-01",
       "releaseDate": "2017-03-03",
@@ -220,9 +218,9 @@
       "id": 10,
       "name": "Apex Legends",
       "platforms": [
-        { "id": 1, "platform": "PC", "slug": "pc" },
-        { "id": 2, "platform": "PlayStation", "slug": "playstation" },
-        { "id": 3, "platform": "Xbox", "slug": "xbox" }
+        { "id": 1, "name": "PC", "slug": "pc" },
+        { "id": 2, "name": "PlayStation", "slug": "playstation" },
+        { "id": 3, "name": "Xbox", "slug": "xbox" }
       ],
       "genre": "Battle Royale",
       "dateAdded": "2023-09-01",
@@ -236,8 +234,8 @@
       "id": 11,
       "name": "Final Fantasy VII Remake",
       "platforms": [
-        { "id": 1, "platform": "PlayStation", "slug": "playstation" },
-        { "id": 2, "platform": "PC", "slug": "pc" }
+        { "id": 1, "name": "PlayStation", "slug": "playstation" },
+        { "id": 2, "name": "PC", "slug": "pc" }
       ],
       "genre": "RPG",
       "dateAdded": "2023-10-01",
@@ -251,8 +249,8 @@
       "id": 12,
       "name": "Forza Horizon 5",
       "platforms": [
-        { "id": 1, "platform": "Xbox", "slug": "xbox" },
-        { "id": 2, "platform": "PC", "slug": "pc" }
+        { "id": 1, "name": "Xbox", "slug": "xbox" },
+        { "id": 2, "name": "PC", "slug": "pc" }
       ],
       "genre": "Racing",
       "dateAdded": "2023-11-01",
@@ -266,10 +264,10 @@
       "id": 13,
       "name": "Hades",
       "platforms": [
-        { "id": 1, "platform": "PC", "slug": "pc" },
-        { "id": 2, "platform": "Nintendo Switch", "slug": "nintendo" },
-        { "id": 3, "platform": "PlayStation", "slug": "playstation" },
-        { "id": 4, "platform": "Xbox", "slug": "xbox" }
+        { "id": 1, "name": "PC", "slug": "pc" },
+        { "id": 2, "name": "Nintendo Switch", "slug": "nintendo" },
+        { "id": 3, "name": "PlayStation", "slug": "playstation" },
+        { "id": 4, "name": "Xbox", "slug": "xbox" }
       ],
       "genre": "Roguelike",
       "dateAdded": "2023-12-01",
