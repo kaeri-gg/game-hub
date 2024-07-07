@@ -1,34 +1,32 @@
+import { GameQuery } from '../App';
 import useGame, { Game } from '../hook/useGame';
-import { Genre } from '../hook/useGenre';
-import { Platform } from '../hook/usePlatform';
 import GameCard from './GameCard';
 import Skeletons from './Skeletons';
 import { useEffect, useState } from 'react';
 
 interface Props {
-  selectedGenre?: Genre;
-  selectedPlatform?: Platform;
+  gameQuery: GameQuery;
+  //selectedGenre?: Genre | null;
+  //selectedPlatform?: Platform | null;
 }
-const GameGrid = ({ selectedGenre, selectedPlatform }: Props) => {
+const GameGrid = ({ gameQuery }: Props) => {
   const [filteredGames, setFilteredGames] = useState<Game[]>([]);
-  const { games, error, isLoading } = useGame({
-    genre: selectedGenre?.name,
-  });
+  const { games, error, isLoading } = useGame(gameQuery);
 
   const skeletons = [1, 2, 3, 4, 5, 6];
 
   useEffect(() => {
-    if (!selectedPlatform) {
+    if (!gameQuery.platform) {
       // We just stop executing here
       return setFilteredGames(games);
     }
 
     setFilteredGames(
       games.filter(game => {
-        return game.platforms.find(platform => platform.name === selectedPlatform?.name);
+        return game.platforms.find(platform => platform.name === gameQuery.platform?.name);
       }),
     );
-  }, [selectedPlatform, games]);
+  }, [gameQuery.platform, games]);
 
   return (
     <>
