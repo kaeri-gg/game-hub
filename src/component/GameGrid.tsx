@@ -1,9 +1,9 @@
-import useGame, { Game } from "../hook/useGame";
-import { Genre } from "../hook/useGenre";
-import { Platform } from "../hook/usePlatform";
-import GameCard from "./GameCard";
-import Skeletons from "./Skeletons";
-import { useEffect, useState } from "react";
+import useGame, { Game } from '../hook/useGame';
+import { Genre } from '../hook/useGenre';
+import { Platform } from '../hook/usePlatform';
+import GameCard from './GameCard';
+import Skeletons from './Skeletons';
+import { useEffect, useState } from 'react';
 
 interface Props {
   selectedGenre?: Genre;
@@ -24,26 +24,23 @@ const GameGrid = ({ selectedGenre, selectedPlatform }: Props) => {
     }
 
     setFilteredGames(
-      games.filter((game) => {
-        return game.platforms.find(
-          (platform) => platform.platform === selectedPlatform?.platform
-        );
-      })
+      games.filter(game => {
+        return game.platforms.find(platform => platform.name === selectedPlatform?.name);
+      }),
     );
   }, [selectedPlatform, games]);
 
   return (
     <>
-      <p>{error && "Error Fetching data"}</p>
+      <p>{error && 'Error Fetching data'}</p>
 
       <div className="container">
         <div className="row justify-content-md-center d-flex flex-flex-wrap">
           {filteredGames.length === 0 && <>No Data</>}
-          {filteredGames.map((game) => (
+          {filteredGames.map(game => (
             <GameCard key={game.id} game={game}></GameCard>
           ))}
-          {isLoading &&
-            skeletons.map((skeleton) => <Skeletons key={skeleton}></Skeletons>)}
+          {isLoading && skeletons.map(skeleton => <Skeletons key={skeleton}></Skeletons>)}
         </div>
       </div>
     </>

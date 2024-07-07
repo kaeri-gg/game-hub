@@ -1,16 +1,10 @@
-import {
-  FaWindows,
-  FaPlaystation,
-  FaXbox,
-  FaApple,
-  FaAndroid,
-} from "react-icons/fa";
-import { MdPhoneIphone } from "react-icons/md";
-import { SiNintendo } from "react-icons/si";
+import { FaWindows, FaPlaystation, FaXbox, FaApple, FaAndroid } from 'react-icons/fa';
+import { MdPhoneIphone } from 'react-icons/md';
+import { SiNintendo } from 'react-icons/si';
 
-import { Game } from "../hook/useGame";
-import { IconType } from "react-icons";
-import { Icon } from "@chakra-ui/react";
+import { Game } from '../hook/useGame';
+import { IconType } from 'react-icons';
+import { Icon } from '@chakra-ui/react';
 
 const PlatformIcons = ({ game }: { game: Game }) => {
   const iconMap: { [key: string]: IconType } = {
@@ -25,9 +19,9 @@ const PlatformIcons = ({ game }: { game: Game }) => {
 
   return (
     <div className="d-flex">
-      {game.platforms.map((platform) => (
+      {game.platforms.map(platform => (
         <p className="card-text col-1" key={platform.id}>
-          {/* {platform.platform} */}
+          {/* {platform.name} */}
           <Icon as={iconMap[platform.slug]} color="gray.500"></Icon>
         </p>
       ))}

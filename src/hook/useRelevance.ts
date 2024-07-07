@@ -1,4 +1,4 @@
-import useData from "./useData";
+import useData from './useData';
 
 export interface Relevance {
   id: number;
@@ -6,8 +6,8 @@ export interface Relevance {
   link: string;
 }
 
-const useRelevances = (endpoint: string = "/relevances") => {
-  const { data: relevances, error, isLoading } = useData<Relevance>(endpoint);
+const useRelevances = () => {
+  const { data: relevances, error, isLoading } = useData<Relevance>('/relevances');
   return { error, isLoading, relevances };
 };
 
