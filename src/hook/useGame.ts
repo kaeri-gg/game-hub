@@ -1,5 +1,6 @@
-import useData from "./useData";
-import { Platform } from "./usePlatform";
+import { GameQuery } from '../App';
+import useData from './useData';
+import { Platform } from './usePlatform';
 export interface Game {
   id: number;
   name: string;
@@ -8,22 +9,20 @@ export interface Game {
   platforms: Platform[];
 }
 
-export interface Filter {
-  genre?: string;
-  platform?: string;
-}
-
-const useGame = (params?: Filter) => {
+const useGame = (gameQuery: GameQuery) => {
   const {
     data: games,
     error,
     isLoading,
   } = useData<Game>(
-    "/games",
+    '/games',
     {
-      params,
+      params: {
+        genres: gameQuery.genre?.id,
+        platforms: gameQuery.platform?.id,
+      },
     },
-    [params?.genre, params?.platform]
+    [gameQuery],
   );
   return { games, error, isLoading };
 };
