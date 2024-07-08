@@ -1,0 +1,9 @@
+[
+  { "id": 1, "name": "PC", "slug": "pc" },
+  { "id": 2, "name": "Xbox", "slug": "xbox" },
+  { "id": 3, "name": "PlayStation", "slug": "playstation" },
+  { "id": 4, "name": "IOS", "slug": "ios" },
+  { "id": 5, "name": "Android", "slug": "android" },
+  { "id": 6, "name": "Apple Macintosh", "slug": "applemacintosh" },
+  { "id": 7, "name": "Nintendo Switch", "slug": "nintendo" }
+]
