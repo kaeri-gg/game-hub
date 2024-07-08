@@ -14,7 +14,7 @@
     "popularity": 95,
     "averageRating": 9.8,
     "metacritic": 93,
-    "background_image": "/assets/background-image/1.jpg"
+    "background_image": "./assets/background-image/1.jpg"
   },
   {
     "id": 2,
@@ -30,7 +30,7 @@
     "popularity": 93,
     "averageRating": 9.6,
     "metacritic": 94,
-    "background_image": "/assets/background-image/2.jpg"
+    "background_image": "./assets/background-image/2.jpg"
   },
   {
     "id": 3,
@@ -46,7 +46,7 @@
     "popularity": 85,
     "averageRating": 8.7,
     "metacritic": 87,
-    "background_image": "/assets/background-image/3.jpg"
+    "background_image": "./assets/background-image/3.jpg"
   },
   {
     "id": 4,
@@ -64,7 +64,7 @@
     "popularity": 99,
     "averageRating": 9.5,
     "metacritic": 93,
-    "background_image": "/assets/background-image/4.jpg"
+    "background_image": "./assets/background-image/4.jpg"
   },
   {
     "id": 5,
@@ -80,7 +80,7 @@
     "popularity": 75,
     "averageRating": 7.8,
     "metacritic": 76,
-    "background_image": "/assets/background-image/5.jpg"
+    "background_image": "./assets/background-image/5.jpg"
   },
   {
     "id": 6,
@@ -96,7 +96,7 @@
     "popularity": 92,
     "averageRating": 9.7,
     "metacritic": 97,
-    "background_image": "/assets/background-image/6.jpg"
+    "background_image": "./assets/background-image/6.jpg"
   },
   {
     "id": 7,
@@ -114,7 +114,7 @@
     "popularity": 98,
     "averageRating": 8.5,
     "metacritic": 81,
-    "background_image": "/assets/background-image/7.jpg"
+    "background_image": "./assets/background-image/7.jpg"
   },
   {
     "id": 8,
@@ -131,7 +131,7 @@
     "popularity": 88,
     "averageRating": 8.9,
     "metacritic": 91,
-    "background_image": "/assets/background-image/8.jpg"
+    "background_image": "./assets/background-image/8.jpg"
   },
   {
     "id": 9,
@@ -143,7 +143,7 @@
     "popularity": 94,
     "averageRating": 9.8,
     "metacritic": 97,
-    "background_image": "/assets/background-image/9.jpg"
+    "background_image": "./assets/background-image/9.jpg"
   },
   {
     "id": 10,
@@ -159,7 +159,7 @@
     "popularity": 87,
     "averageRating": 8.3,
     "metacritic": 89,
-    "background_image": "/assets/background-image/10.jpg"
+    "background_image": "./assets/background-image/10.jpg"
   },
   {
     "id": 11,
@@ -174,7 +174,7 @@
     "popularity": 90,
     "averageRating": 9.2,
     "metacritic": 87,
-    "background_image": "/assets/background-image/1.jpg"
+    "background_image": "./assets/background-image/1.jpg"
   },
   {
     "id": 12,
@@ -189,7 +189,7 @@
     "popularity": 84,
     "averageRating": 9.0,
     "metacritic": 91,
-    "background_image": "/assets/background-image/2.jpg"
+    "background_image": "./assets/background-image/2.jpg"
   },
   {
     "id": 13,
@@ -206,6 +206,6 @@
     "popularity": 86,
     "averageRating": 9.5,
     "metacritic": 93,
-    "background_image": "/assets/background-image/3.jpg"
+    "background_image": "./assets/background-image/3.jpg"
   }
 ]
