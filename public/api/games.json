@@ -1,0 +1,211 @@
+[
+  {
+    "id": 1,
+    "name": "The Witcher 3: Wild Hunt",
+    "platforms": [
+      { "id": 1, "name": "PC", "slug": "pc" },
+      { "id": 2, "name": "PlayStation", "slug": "playstation" },
+      { "id": 3, "name": "Xbox", "slug": "xbox" },
+      { "id": 4, "name": "Nintendo Switch", "slug": "nintendo" }
+    ],
+    "genre": "RPG",
+    "dateAdded": "2023-01-01",
+    "releaseDate": "2015-05-19",
+    "popularity": 95,
+    "averageRating": 9.8,
+    "metacritic": 93,
+    "background_image": "/assets/background-image/1.jpg"
+  },
+  {
+    "id": 2,
+    "name": "God of War",
+    "platforms": [
+      { "id": 1, "name": "PlayStation", "slug": "playstation" },
+      { "id": 2, "name": "PC", "slug": "pc" },
+      { "id": 3, "name": "Xbox", "slug": "xbox" }
+    ],
+    "genre": "Action",
+    "dateAdded": "2023-02-01",
+    "releaseDate": "2018-04-20",
+    "popularity": 93,
+    "averageRating": 9.6,
+    "metacritic": 94,
+    "background_image": "/assets/background-image/2.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Halo Infinite",
+    "platforms": [
+      { "id": 1, "name": "Xbox", "slug": "xbox" },
+      { "id": 2, "name": "PC", "slug": "pc" },
+      { "id": 3, "name": "PlayStation", "slug": "playstation" }
+    ],
+    "genre": "Shooter",
+    "dateAdded": "2023-03-01",
+    "releaseDate": "2021-12-08",
+    "popularity": 85,
+    "averageRating": 8.7,
+    "metacritic": 87,
+    "background_image": "/assets/background-image/3.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Minecraft",
+    "platforms": [
+      { "id": 1, "name": "PC", "slug": "pc" },
+      { "id": 2, "name": "PlayStation", "slug": "playstation" },
+      { "id": 3, "name": "Xbox", "slug": "xbox" },
+      { "id": 4, "name": "Nintendo Switch", "slug": "nintendo" },
+      { "id": 5, "name": "Apple Macintosh", "slug": "applemacintosh" }
+    ],
+    "genre": "Sandbox",
+    "dateAdded": "2023-01-15",
+    "releaseDate": "2011-11-18",
+    "popularity": 99,
+    "averageRating": 9.5,
+    "metacritic": 93,
+    "background_image": "/assets/background-image/4.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Cyberpunk 2077",
+    "platforms": [
+      { "id": 1, "name": "PlayStation", "slug": "playstation" },
+      { "id": 2, "name": "PC", "slug": "pc" },
+      { "id": 3, "name": "Xbox", "slug": "xbox" }
+    ],
+    "genre": "RPG",
+    "dateAdded": "2023-04-01",
+    "releaseDate": "2020-12-10",
+    "popularity": 75,
+    "averageRating": 7.8,
+    "metacritic": 76,
+    "background_image": "/assets/background-image/5.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Red Dead Redemption 2",
+    "platforms": [
+      { "id": 1, "name": "Xbox", "slug": "xbox" },
+      { "id": 2, "name": "PC", "slug": "pc" },
+      { "id": 3, "name": "PlayStation", "slug": "playstation" }
+    ],
+    "genre": "Action",
+    "dateAdded": "2023-05-01",
+    "releaseDate": "2018-10-26",
+    "popularity": 92,
+    "averageRating": 9.7,
+    "metacritic": 97,
+    "background_image": "/assets/background-image/6.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Fortnite",
+    "platforms": [
+      { "id": 1, "name": "PC", "slug": "pc" },
+      { "id": 2, "name": "PlayStation", "slug": "playstation" },
+      { "id": 3, "name": "Xbox", "slug": "xbox" },
+      { "id": 4, "name": "IOS", "slug": "ios" },
+      { "id": 5, "name": "Android", "slug": "android" }
+    ],
+    "genre": "Battle Royale",
+    "dateAdded": "2023-06-01",
+    "releaseDate": "2017-07-21",
+    "popularity": 98,
+    "averageRating": 8.5,
+    "metacritic": 81,
+    "background_image": "/assets/background-image/7.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Overwatch",
+    "platforms": [
+      { "id": 1, "name": "PlayStation", "slug": "playstation" },
+      { "id": 2, "name": "PC", "slug": "pc" },
+      { "id": 3, "name": "Xbox", "slug": "xbox" },
+      { "id": 4, "name": "Nintendo Switch", "slug": "nintendo" }
+    ],
+    "genre": "Shooter",
+    "dateAdded": "2023-07-01",
+    "releaseDate": "2016-05-24",
+    "popularity": 88,
+    "averageRating": 8.9,
+    "metacritic": 91,
+    "background_image": "/assets/background-image/8.jpg"
+  },
+  {
+    "id": 9,
+    "name": "The Legend of Zelda: Breath of the Wild",
+    "platforms": [{ "id": 1, "name": "Nintendo Switch", "slug": "nintendo" }],
+    "genre": "Adventure",
+    "dateAdded": "2023-08-01",
+    "releaseDate": "2017-03-03",
+    "popularity": 94,
+    "averageRating": 9.8,
+    "metacritic": 97,
+    "background_image": "/assets/background-image/9.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Apex Legends",
+    "platforms": [
+      { "id": 1, "name": "PC", "slug": "pc" },
+      { "id": 2, "name": "PlayStation", "slug": "playstation" },
+      { "id": 3, "name": "Xbox", "slug": "xbox" }
+    ],
+    "genre": "Battle Royale",
+    "dateAdded": "2023-09-01",
+    "releaseDate": "2019-02-04",
+    "popularity": 87,
+    "averageRating": 8.3,
+    "metacritic": 89,
+    "background_image": "/assets/background-image/10.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Final Fantasy VII Remake",
+    "platforms": [
+      { "id": 1, "name": "PlayStation", "slug": "playstation" },
+      { "id": 2, "name": "PC", "slug": "pc" }
+    ],
+    "genre": "RPG",
+    "dateAdded": "2023-10-01",
+    "releaseDate": "2020-04-10",
+    "popularity": 90,
+    "averageRating": 9.2,
+    "metacritic": 87,
+    "background_image": "/assets/background-image/1.jpg"
+  },
+  {
+    "id": 12,
+    "name": "Forza Horizon 5",
+    "platforms": [
+      { "id": 1, "name": "Xbox", "slug": "xbox" },
+      { "id": 2, "name": "PC", "slug": "pc" }
+    ],
+    "genre": "Racing",
+    "dateAdded": "2023-11-01",
+    "releaseDate": "2021-11-05",
+    "popularity": 84,
+    "averageRating": 9.0,
+    "metacritic": 91,
+    "background_image": "/assets/background-image/2.jpg"
+  },
+  {
+    "id": 13,
+    "name": "Hades",
+    "platforms": [
+      { "id": 1, "name": "PC", "slug": "pc" },
+      { "id": 2, "name": "Nintendo Switch", "slug": "nintendo" },
+      { "id": 3, "name": "PlayStation", "slug": "playstation" },
+      { "id": 4, "name": "Xbox", "slug": "xbox" }
+    ],
+    "genre": "Roguelike",
+    "dateAdded": "2023-12-01",
+    "releaseDate": "2020-09-17",
+    "popularity": 86,
+    "averageRating": 9.5,
+    "metacritic": 93,
+    "background_image": "/assets/background-image/3.jpg"
+  }
+]
