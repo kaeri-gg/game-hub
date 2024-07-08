@@ -9,7 +9,7 @@
     "build:dev": "tsc && vite build --mode=development",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "server": "npx json-server --host 127.0.0.1 --port 1234 db.json"
+    "server": "npx json-server --host 127.0.0.1 --port 4067 db.json"
   },
   "dependencies": {
     "@chakra-ui/icons": "^2.1.1",

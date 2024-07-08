@@ -1,0 +1,6 @@
+[
+  { "id": 1, "name": "Date added", "slug": "dateAdded" },
+  { "id": 3, "name": "Release date", "slug": "releaseDate" },
+  { "id": 4, "name": "Popularity", "slug": "popularity" },
+  { "id": 5, "name": "Average ratings", "slug": "averageRatings" }
+]
