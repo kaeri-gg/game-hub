@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "img": "./assets/background-image/1.jpg",
+    "name": "RPG"
+  },
+  {
+    "id": 2,
+    "img": "./assets/background-image/2.jpg",
+    "name": "Action"
+  },
+  {
+    "id": 3,
+    "img": "./assets/background-image/3.jpg",
+    "name": "Shooter"
+  },
+  {
+    "id": 4,
+    "img": "./assets/background-image/4.jpg",
+    "name": "Sandbox"
+  },
+  {
+    "id": 5,
+    "img": "./assets/background-image/5.jpg",
+    "name": "Battle Royale"
+  },
+  {
+    "id": 6,
+    "img": "./assets/background-image/6.jpg",
+    "name": "Adventure"
+  },
+  {
+    "id": 7,
+    "img": "./assets/background-image/2.jpg",
+    "name": "Racing"
+  },
+  {
+    "id": 8,
+    "img": "./assets/background-image/3.jpg",
+    "name": "Roguelike"
+  }
+]

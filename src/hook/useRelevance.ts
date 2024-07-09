@@ -7,7 +7,7 @@ export interface Relevance {
 }
 
 const useRelevances = () => {
-  const { data: relevances, error, isLoading } = useData<Relevance>('/relevances');
+  const { data: relevances, error, isLoading } = useData<Relevance>('api/relevances.json');
   return { error, isLoading, relevances };
 };
 

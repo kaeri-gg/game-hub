@@ -7,7 +7,7 @@ export interface Platform {
 }
 
 const usePlatform = () => {
-  const { data: platforms, error, isLoading } = useData<Platform>('/platforms');
+  const { data: platforms, error, isLoading } = useData<Platform>('api/platforms.json');
   return { error, isLoading, platforms };
 };
 

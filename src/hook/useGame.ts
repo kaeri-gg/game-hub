@@ -15,7 +15,7 @@ const useGame = (gameQuery: GameQuery) => {
     error,
     isLoading,
   } = useData<Game>(
-    '/games',
+    'api/games.json',
     {
       params: {
         genre: gameQuery.genre?.name,
