@@ -9,10 +9,12 @@ import { Genre } from './hook/useGenre';
 import { Platform } from './hook/usePlatform';
 import './style.scss';
 import { HStack } from '@chakra-ui/react';
+import { Sort } from './hook/useSortSelector';
 
 export interface GameQuery {
   genre: Genre | null;
   platform: Platform | null;
+  sortItem: Sort | null;
 }
 
 function App() {
@@ -41,7 +43,7 @@ function App() {
               <PlatformSelector
                 onSelectedPlatform={platform => setGameQuery({ ...gameQuery, platform })}
               ></PlatformSelector>
-              <SortSelector></SortSelector>
+              <SortSelector onSelectedSortItem={sortItem => setGameQuery({ ...gameQuery, sortItem })}></SortSelector>
             </HStack>
           </div>
           <div className="d-flex">

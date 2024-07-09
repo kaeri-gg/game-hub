@@ -11,12 +11,13 @@ const PlatformSelector = ({ onSelectedPlatform }: Props) => {
   const { platforms } = usePlatform();
   const [selected, setSelected] = useState<string>('All');
 
-  // const handleFilter = (platform: Platform) => {
-  //   return () => {
-  //     console.log("Selected Platform: ", platform.name);
-  //     onSelectedPlatform(platform);
-  //   };
-  // };
+  const handleFilter = (platform: Platform) => {
+    return () => {
+      console.log('Selected Platform: ', platform.name);
+      onSelectedPlatform(platform);
+      setSelected(platform.name);
+    };
+  };
 
   // const handleFilter = (platform: Platform) => () => {
   //   console.log("Selected Platform: ", platform.name);
@@ -30,15 +31,14 @@ const PlatformSelector = ({ onSelectedPlatform }: Props) => {
       </MenuButton>
       <MenuList>
         {platforms.map(platform => {
-          const handleFilter = () => {
-            console.log('Selected Platform: ', platform.name);
-            onSelectedPlatform(platform);
-            setSelected(platform.name);
-          };
+          // const handleFilter = () => {
+          //   onSelectedPlatform(platform);
+          //   setSelected(platform.name);
+          // };
 
           return (
             <MenuItem key={platform.id}>
-              <a className="dropdown-item" href={'#' + platform.slug} onClick={handleFilter}>
+              <a className="dropdown-item" href={'#' + platform.slug} onClick={handleFilter(platform)}>
                 {platform.name}
               </a>
             </MenuItem>

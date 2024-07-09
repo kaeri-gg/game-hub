@@ -1,19 +1,32 @@
 import { Menu, MenuButton, Button, MenuList, MenuItem } from '@chakra-ui/react';
 import { BsChevronDown } from 'react-icons/bs';
-import useRelevances from '../hook/useRelevance';
+import useSortSelector, { Sort } from '../hook/useSortSelector';
+import { useState } from 'react';
 
-const SortSelector = () => {
-  const { relevances } = useRelevances();
+interface Props {
+  onSelectedSortItem: (sort: Sort) => void;
+}
+const SortSelector = ({ onSelectedSortItem }: Props) => {
+  const { sortItem } = useSortSelector();
+  const [selectedSortitem, setSelectedSortitem] = useState<string>('Relevance');
+
+  const handleSort = (sort: Sort) => {
+    return () => {
+      onSelectedSortItem(sort);
+      setSelectedSortitem(sort.name);
+    };
+  };
+
   return (
     <Menu>
       <MenuButton as={Button} rightIcon={<BsChevronDown />}>
-        Order by Relevance
+        Order by: ({selectedSortitem})
       </MenuButton>
       <MenuList>
-        {relevances.map(relevance => (
-          <MenuItem key={relevance.id}>
-            <a className="dropdown-item" href={relevance.link}>
-              {relevance.name}
+        {sortItem.map(sort => (
+          <MenuItem key={sort.id}>
+            <a className="dropdown-item" onClick={handleSort(sort)}>
+              {sort.name}
             </a>
           </MenuItem>
         ))}
