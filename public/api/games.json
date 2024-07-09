@@ -174,7 +174,7 @@
     "popularity": 90,
     "averageRating": 9.2,
     "metacritic": 87,
-    "background_image": "./assets/background-image/1.jpg"
+    "background_image": "./assets/background-image/11.jpg"
   },
   {
     "id": 12,
@@ -189,7 +189,7 @@
     "popularity": 84,
     "averageRating": 9.0,
     "metacritic": 91,
-    "background_image": "./assets/background-image/2.jpg"
+    "background_image": "./assets/background-image/12.jpg"
   },
   {
     "id": 13,
@@ -206,6 +206,6 @@
     "popularity": 86,
     "averageRating": 9.5,
     "metacritic": 93,
-    "background_image": "./assets/background-image/3.jpg"
+    "background_image": "./assets/background-image/13.jpg"
   }
 ]

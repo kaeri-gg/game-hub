@@ -3,15 +3,18 @@ import { useState } from 'react';
 import GenreList from './component/GenreList';
 import PageTitle from './component/PageTitle';
 import PlatformSelector from './component/PlatformSelector';
-import OrderByRelevance from './component/OrderByRelevance';
+import SortSelector from './component/SortSelector';
 import GameGrid from './component/GameGrid';
 import { Genre } from './hook/useGenre';
 import { Platform } from './hook/usePlatform';
 import './style.scss';
+import { HStack } from '@chakra-ui/react';
+import { Sort } from './hook/useSortSelector';
 
 export interface GameQuery {
   genre: Genre | null;
   platform: Platform | null;
+  sortItem: Sort | null;
 }
 
 function App() {
@@ -36,10 +39,12 @@ function App() {
         <div className="col-10">
           <PageTitle name={pageTitle}></PageTitle>
           <div className="d-flex">
-            <PlatformSelector
-              onSelectedPlatform={platform => setGameQuery({ ...gameQuery, platform })}
-            ></PlatformSelector>
-            <OrderByRelevance></OrderByRelevance>
+            <HStack spacing={5}>
+              <PlatformSelector
+                onSelectedPlatform={platform => setGameQuery({ ...gameQuery, platform })}
+              ></PlatformSelector>
+              <SortSelector onSelectedSortItem={sortItem => setGameQuery({ ...gameQuery, sortItem })}></SortSelector>
+            </HStack>
           </div>
           <div className="d-flex">
             <GameGrid gameQuery={gameQuery}></GameGrid>
