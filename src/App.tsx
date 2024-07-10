@@ -8,7 +8,7 @@ import GameGrid from './component/GameGrid';
 import { Genre } from './hook/useGenre';
 import { Platform } from './hook/usePlatform';
 import './style.scss';
-import { HStack } from '@chakra-ui/react';
+import { Box, Flex } from '@chakra-ui/react';
 import { Sort } from './hook/useSortSelector';
 
 export interface GameQuery {
@@ -39,12 +39,14 @@ function App() {
         <div className="col-10">
           <PageTitle name={pageTitle}></PageTitle>
           <div className="d-flex">
-            <HStack spacing={5}>
-              <PlatformSelector
-                onSelectedPlatform={platform => setGameQuery({ ...gameQuery, platform })}
-              ></PlatformSelector>
+            <Flex paddingLeft={2} marginBottom={5}>
+              <Box marginRight={5}>
+                <PlatformSelector
+                  onSelectedPlatform={platform => setGameQuery({ ...gameQuery, platform })}
+                ></PlatformSelector>
+              </Box>
               <SortSelector onSelectedSortItem={sortItem => setGameQuery({ ...gameQuery, sortItem })}></SortSelector>
-            </HStack>
+            </Flex>
           </div>
           <div className="d-flex">
             <GameGrid gameQuery={gameQuery}></GameGrid>

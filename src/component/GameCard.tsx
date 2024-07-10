@@ -1,6 +1,6 @@
-import { Game } from "../hook/useGame";
-import CriticScore from "./CriticScore";
-import PlatformIcons from "./PlatformIcons";
+import { Game } from '../hook/useGame';
+import CriticScore from './CriticScore';
+import PlatformIcons from './PlatformIcons';
 
 const GameCard = ({ game }: { game: Game }) => {
   return (
@@ -9,10 +9,6 @@ const GameCard = ({ game }: { game: Game }) => {
         <img className="card-img-top" src={game.background_image} />
         <div className="card-body">
           <h5 className="card-title">{game.name}</h5>
-          {/* <p className="card-text"></p>
-          <a href="#" className="btn btn-primary">
-            Go somewhere
-          </a> */}
           <div className="d-flex justify-content-between">
             <div className="col-11">
               <PlatformIcons game={game}></PlatformIcons>
