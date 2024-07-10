@@ -1,13 +1,11 @@
-import { SearchIcon } from "@chakra-ui/icons";
-import { InputGroup, InputLeftElement, Input } from "@chakra-ui/react";
+import { Input, InputGroup, InputLeftElement } from '@chakra-ui/react';
+import { BsSearch } from 'react-icons/bs';
 
 const SearchInput = () => {
   return (
     <InputGroup>
-      <InputLeftElement pointerEvents="none">
-        <SearchIcon color="gray.300" />
-      </InputLeftElement>
-      <Input type="text" placeholder="Search game..." />
+      <InputLeftElement children={<BsSearch />} />
+      <Input borderRadius={20} placeholder="Search game..." variant="filled" />;
     </InputGroup>
   );
 };
