@@ -8,13 +8,14 @@ import GameGrid from './component/GameGrid';
 import { Genre } from './hook/useGenre';
 import { Platform } from './hook/usePlatform';
 import './style.scss';
-import { Box, Flex } from '@chakra-ui/react';
+import { Box, Button, Flex } from '@chakra-ui/react';
 import { Sort } from './hook/useSortSelector';
 
 export interface GameQuery {
   genre: Genre | null;
   platform: Platform | null;
   sortItem: Sort | null;
+  searchText: string; //from the SearchInput.tsx
 }
 
 function App() {
@@ -27,29 +28,27 @@ function App() {
   return (
     <>
       <div className="col-12">
-        <NavBar></NavBar>
+        <NavBar onSearch={searchText => setGameQuery({ ...gameQuery, searchText })} />
       </div>
       <div className="container-fluid d-flex">
         <div className="col-2">
-          <GenreList
-            selectedGenre={gameQuery.genre}
-            onSelectGenre={genre => setGameQuery({ ...gameQuery, genre })}
-          ></GenreList>
+          <GenreList selectedGenre={gameQuery.genre} onSelectGenre={genre => setGameQuery({ ...gameQuery, genre })} />
         </div>
         <div className="col-10">
-          <PageTitle name={pageTitle}></PageTitle>
+          <PageTitle name={pageTitle} />
           <div className="d-flex">
             <Flex paddingLeft={2} marginBottom={5}>
               <Box marginRight={5}>
-                <PlatformSelector
-                  onSelectedPlatform={platform => setGameQuery({ ...gameQuery, platform })}
-                ></PlatformSelector>
+                <PlatformSelector onSelectedPlatform={platform => setGameQuery({ ...gameQuery, platform })} />
               </Box>
-              <SortSelector onSelectedSortItem={sortItem => setGameQuery({ ...gameQuery, sortItem })}></SortSelector>
+              <SortSelector onSelectedSortItem={sortItem => setGameQuery({ ...gameQuery, sortItem })} />
+              <Button marginLeft={5} variant="link" fontWeight={'normal'} onClick={() => setGameQuery({} as GameQuery)}>
+                Reset Filter
+              </Button>
             </Flex>
           </div>
           <div className="d-flex">
-            <GameGrid gameQuery={gameQuery}></GameGrid>
+            <GameGrid gameQuery={gameQuery} />
           </div>
         </div>
       </div>

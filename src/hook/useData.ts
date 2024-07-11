@@ -1,14 +1,10 @@
-import { useState, useEffect } from "react";
-import apiClient from "../services/api-client";
-import axios, { AxiosRequestConfig, CanceledError } from "axios";
+import { useState, useEffect } from 'react';
+import apiClient from '../services/api-client';
+import axios, { AxiosRequestConfig, CanceledError } from 'axios';
 
-const useData = <T>(
-  endpoint: string,
-  requestConfig?: AxiosRequestConfig,
-  deps?: any[]
-) => {
+const useData = <T>(endpoint: string, requestConfig?: AxiosRequestConfig, deps?: any[]) => {
   const [data, setData] = useState<T[]>([]); // generic Type data
-  const [error, setError] = useState("");
+  const [error, setError] = useState('');
   const [isLoading, setLoading] = useState(false);
 
   useEffect(
@@ -34,7 +30,7 @@ const useData = <T>(
           if (err instanceof Error) {
             setError(err.message);
           } else {
-            setError("An unknown error occured.");
+            setError('An unknown error occured.');
           }
           setLoading(false);
         }
@@ -44,7 +40,7 @@ const useData = <T>(
 
       return () => controller.abort();
     },
-    deps ? [...deps] : []
+    deps ? [...deps] : [],
   );
 
   return { error, isLoading, data };

@@ -1,9 +1,10 @@
 import useData from './useData';
 
+export type Slug = 'name' | 'releaseDate' | 'popularity' | 'averageRatings' | 'dateAdded';
 export interface Sort {
   id: number;
   name: string;
-  slug: string;
+  slug: Slug;
 }
 
 const useSortSelector = () => {
