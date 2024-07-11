@@ -20,7 +20,7 @@ export interface GameQuery {
 
 function App() {
   const [gameQuery, setGameQuery] = useState<GameQuery>({} as GameQuery);
-  const [pageTitle] = useState('Games');
+  const [pageTitle, setPageTitle] = useState('Games');
 
   //const [selectedGenre, setSelectedGenre] = useState<Genre | undefined>(undefined);
   //const [selectedPlatform, setSelectedPlatform] = useState<Platform>();
@@ -32,7 +32,13 @@ function App() {
       </div>
       <div className="container-fluid d-flex">
         <div className="col-2">
-          <GenreList selectedGenre={gameQuery.genre} onSelectGenre={genre => setGameQuery({ ...gameQuery, genre })} />
+          <GenreList
+            selectedGenre={gameQuery.genre}
+            onSelectGenre={genre => {
+              setPageTitle(genre.name);
+              setGameQuery({ ...gameQuery, genre });
+            }}
+          />
         </div>
         <div className="col-10">
           <PageTitle name={pageTitle} />
