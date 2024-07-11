@@ -13,7 +13,6 @@ const PlatformSelector = ({ onSelectedPlatform }: Props) => {
 
   const handleFilter = (platform: Platform) => {
     return () => {
-      console.log('Selected Platform: ', platform.name);
       onSelectedPlatform(platform);
       setSelected(platform.name);
     };

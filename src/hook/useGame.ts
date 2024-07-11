@@ -1,4 +1,3 @@
-import { GameQuery } from '../App';
 import useData from './useData';
 import { Platform } from './usePlatform';
 export interface Game {
@@ -14,21 +13,13 @@ export interface Game {
   background_image: string;
 }
 
-const useGame = (gameQuery: GameQuery) => {
+const useGame = () => {
   const {
-    data: games,
+    data: games, // "data" is renamed into "games"
     error,
     isLoading,
-  } = useData<Game>(
-    'api/games.json',
-    {
-      params: {
-        genre: gameQuery.genre?.name,
-        platforms: gameQuery.platform?.id,
-      },
-    },
-    [gameQuery],
-  );
+  } = useData<Game>('api/games.json');
+
   return { games, error, isLoading };
 };
 
