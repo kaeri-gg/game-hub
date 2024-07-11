@@ -1,7 +1,7 @@
 import NavBar from './component/NavBar';
 import { useState } from 'react';
 import GenreList from './component/GenreList';
-import PageTitle from './component/PageTitle';
+import GameHeading from './component/GameHeading';
 import PlatformSelector from './component/PlatformSelector';
 import SortSelector from './component/SortSelector';
 import GameGrid from './component/GameGrid';
@@ -41,13 +41,23 @@ function App() {
           />
         </div>
         <div className="col-10">
-          <PageTitle name={pageTitle} />
+          <GameHeading name={pageTitle} />
           <div className="d-flex">
             <Flex paddingLeft={2} marginBottom={5}>
               <Box marginRight={5}>
-                <PlatformSelector onSelectedPlatform={platform => setGameQuery({ ...gameQuery, platform })} />
+                <PlatformSelector
+                  onSelectedPlatform={platform => {
+                    setPageTitle(platform.name);
+                    setGameQuery({ ...gameQuery, platform });
+                  }}
+                />
               </Box>
-              <SortSelector onSelectedSortItem={sortItem => setGameQuery({ ...gameQuery, sortItem })} />
+              <SortSelector
+                onSelectedSortItem={sortItem => {
+                  setPageTitle(sortItem.name);
+                  setGameQuery({ ...gameQuery, sortItem });
+                }}
+              />
               <Button marginLeft={5} variant="link" fontWeight={'normal'} onClick={() => setGameQuery({} as GameQuery)}>
                 Reset Filter
               </Button>
