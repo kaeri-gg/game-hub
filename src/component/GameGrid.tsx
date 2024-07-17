@@ -1,3 +1,4 @@
+import { SimpleGrid } from '@chakra-ui/react';
 import { GameQuery } from '../App';
 import useGame, { Game } from '../hook/useGame';
 import { Genre } from '../hook/useGenre';
@@ -92,18 +93,16 @@ const GameGrid = ({ gameQuery }: Props) => {
     <>
       <p>{error && 'Error Fetching data'}</p>
 
-      <div className="container">
-        <div className="row justify-content-md-center d-flex flex-flex-wrap">
-          {filteredGames.map(game => (
-            <GameCard key={game.id} game={game} />
-          ))}
+      <SimpleGrid columns={{ sm: 1, md: 2, lg: 3, xl: 5 }} spacing={5} padding="10px">
+        {filteredGames.map(game => (
+          <GameCard key={game.id} game={game} />
+        ))}
 
-          {isLoading && skeletons.map(skeleton => <Skeletons key={skeleton} />)}
+        {isLoading && skeletons.map(skeleton => <Skeletons key={skeleton} />)}
 
-          {/* Display message if both filteredByPlatforms and filteredBySortSelector are empty */}
-          {filteredGames.length === 0 && <>No available data to display. o(TヘTo) 😭🙃 </>}
-        </div>
-      </div>
+        {/* Display message if both filteredByPlatforms and filteredBySortSelector are empty */}
+        {filteredGames.length === 0 && <>No available data to display. o(TヘTo) 😭🙃 </>}
+      </SimpleGrid>
     </>
   );
 };

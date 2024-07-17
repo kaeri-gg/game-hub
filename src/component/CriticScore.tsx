@@ -1,13 +1,15 @@
+import { Badge } from '@chakra-ui/react';
+
 interface Props {
   metric: number;
 }
 const CriticScore = ({ metric }: Props) => {
-  const color = metric > 90 ? "badge text-bg-success" : "badge text-bg-warning";
+  const color = metric > 90 ? 'green' : 90 ? 'yellow' : '';
 
   return (
-    <div>
-      <span className={color}> {metric} </span>
-    </div>
+    <Badge colorScheme={color} fontSize="14px" paddingX={2} borderRadius="14px">
+      {metric}
+    </Badge>
   );
 };
 
