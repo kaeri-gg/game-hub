@@ -58,7 +58,15 @@ function App() {
                   setGameQuery({ ...gameQuery, sortItem });
                 }}
               />
-              <Button marginLeft={5} variant="link" fontWeight={'normal'} onClick={() => setGameQuery({} as GameQuery)}>
+              <Button
+                marginLeft={5}
+                variant="link"
+                fontWeight={'normal'}
+                onClick={() => {
+                  setGameQuery({} as GameQuery);
+                  setPageTitle('Games');
+                }}
+              >
                 Reset Filter
               </Button>
             </Flex>
