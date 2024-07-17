@@ -4,7 +4,7 @@ import { SiNintendo } from 'react-icons/si';
 
 import { Game } from '../hook/useGame';
 import { IconType } from 'react-icons';
-import { Icon } from '@chakra-ui/react';
+import { HStack, Icon } from '@chakra-ui/react';
 
 const PlatformIcons = ({ game }: { game: Game }) => {
   const iconMap: { [key: string]: IconType } = {
@@ -18,14 +18,11 @@ const PlatformIcons = ({ game }: { game: Game }) => {
   };
 
   return (
-    <div className="d-flex">
+    <HStack marginY={1}>
       {game.platforms.map(platform => (
-        <p className="card-text col-1" key={platform.id}>
-          {/* {platform.name} */}
-          <Icon as={iconMap[platform.slug]} color="gray.500"></Icon>
-        </p>
+        <Icon key={platform.id} as={iconMap[platform.slug]} color="gray.500"></Icon>
       ))}
-    </div>
+    </HStack>
   );
 };
 
