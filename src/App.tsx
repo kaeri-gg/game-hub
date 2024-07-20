@@ -68,7 +68,7 @@ function App() {
         <GridItem area="main">
           <GameHeading name={pageTitle} />
 
-          <Wrap marginBottom={5} alignItems={'center'}>
+          <Wrap marginBottom={5} align={'center'}>
             <WrapItem>
               <Box marginRight={5}>
                 <PlatformSelector
