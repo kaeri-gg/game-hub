@@ -8,7 +8,7 @@ import GameGrid from './component/GameGrid';
 import { Genre } from './hook/useGenre';
 import { Platform } from './hook/usePlatform';
 import './style.scss';
-import { Box, Button, Divider, Flex, Grid, GridItem, Kbd, Show, Text } from '@chakra-ui/react';
+import { Box, Button, Divider, Grid, GridItem, Kbd, Show, Text, Wrap, WrapItem } from '@chakra-ui/react';
 import { Sort } from './hook/useSortSelector';
 
 export interface GameQuery {
@@ -67,8 +67,9 @@ function App() {
 
         <GridItem area="main">
           <GameHeading name={pageTitle} />
-          <div className="d-flex">
-            <Flex paddingLeft={2} marginBottom={5}>
+
+          <Wrap marginBottom={5} alignItems={'center'}>
+            <WrapItem>
               <Box marginRight={5}>
                 <PlatformSelector
                   onSelectedPlatform={platform => {
@@ -77,12 +78,16 @@ function App() {
                   }}
                 />
               </Box>
+            </WrapItem>
+            <WrapItem>
               <SortSelector
                 onSelectedSortItem={sortItem => {
                   setPageTitle(sortItem.name);
                   setGameQuery({ ...gameQuery, sortItem });
                 }}
               />
+            </WrapItem>
+            <WrapItem>
               <Button
                 marginLeft={5}
                 variant="link"
@@ -94,11 +99,10 @@ function App() {
               >
                 Reset Filter
               </Button>
-            </Flex>
-          </div>
-          <div className="d-flex">
-            <GameGrid gameQuery={gameQuery} />
-          </div>
+            </WrapItem>
+          </Wrap>
+
+          <GameGrid gameQuery={gameQuery} />
         </GridItem>
         <GridItem area="footer" paddingBottom={'20px'}>
           <Divider />
