@@ -8,7 +8,7 @@ import GameGrid from './component/GameGrid';
 import { Genre } from './hook/useGenre';
 import { Platform } from './hook/usePlatform';
 import './style.scss';
-import { Box, Button, Flex } from '@chakra-ui/react';
+import { Box, Button, Divider, Grid, GridItem, Kbd, Show, Text, Wrap, WrapItem } from '@chakra-ui/react';
 import { Sort } from './hook/useSortSelector';
 
 export interface GameQuery {
@@ -27,23 +27,49 @@ function App() {
 
   return (
     <>
-      <div className="col-12">
-        <NavBar onSearch={searchText => setGameQuery({ ...gameQuery, searchText })} />
-      </div>
-      <div className="container-fluid d-flex">
-        <div className="col-2">
-          <GenreList
-            selectedGenre={gameQuery.genre}
-            onSelectGenre={genre => {
-              setPageTitle(genre.name);
-              setGameQuery({ ...gameQuery, genre });
-            }}
-          />
-        </div>
-        <div className="col-10">
+      <Grid
+        templateAreas={{
+          base: `"nav" "main" "footer" `,
+          lg: `"nav nav" "aside main"  "footer footer"`,
+        }}
+        gap="2"
+        gridTemplateColumns={{
+          //base: '250px 2fr', // 0px
+          sm: '', // ~480px
+          md: '', // ~768px
+          lg: '250px 2fr', // ~992px
+          xl: '250px 2fr', // ~1280px
+          '2xl': '250px 2fr', // ~1536px
+        }}
+        paddingX={{
+          base: '1em',
+          sm: '2em',
+          md: '3em',
+          lg: '4em',
+          xl: '5em',
+          '2xl': '6em',
+        }}
+      >
+        <GridItem area="nav">
+          <NavBar onSearch={searchText => setGameQuery({ ...gameQuery, searchText })} />
+        </GridItem>
+        <Show above="lg">
+          <GridItem area="aside">
+            <GenreList
+              selectedGenre={gameQuery.genre}
+              onSelectGenre={genre => {
+                setPageTitle(genre.name);
+                setGameQuery({ ...gameQuery, genre });
+              }}
+            />
+          </GridItem>
+        </Show>
+
+        <GridItem area="main">
           <GameHeading name={pageTitle} />
-          <div className="d-flex">
-            <Flex paddingLeft={2} marginBottom={5}>
+
+          <Wrap marginBottom={5} alignItems={'center'}>
+            <WrapItem>
               <Box marginRight={5}>
                 <PlatformSelector
                   onSelectedPlatform={platform => {
@@ -52,12 +78,16 @@ function App() {
                   }}
                 />
               </Box>
+            </WrapItem>
+            <WrapItem>
               <SortSelector
                 onSelectedSortItem={sortItem => {
                   setPageTitle(sortItem.name);
                   setGameQuery({ ...gameQuery, sortItem });
                 }}
               />
+            </WrapItem>
+            <WrapItem>
               <Button
                 marginLeft={5}
                 variant="link"
@@ -69,13 +99,20 @@ function App() {
               >
                 Reset Filter
               </Button>
-            </Flex>
-          </div>
-          <div className="d-flex">
-            <GameGrid gameQuery={gameQuery} />
-          </div>
-        </div>
-      </div>
+            </WrapItem>
+          </Wrap>
+
+          <GameGrid gameQuery={gameQuery} />
+        </GridItem>
+        <GridItem area="footer" paddingBottom={'20px'}>
+          <Divider />
+          <Box w="100%" p={4} color={'gray.300'} justifyContent={'center'} display="flex">
+            <span>
+              <Kbd>ctr</Kbd> + <Kbd>W</Kbd> <Text as="i">If you are not happy with this. o(TヘTo)</Text>
+            </span>
+          </Box>
+        </GridItem>
+      </Grid>
     </>
   );
 }
