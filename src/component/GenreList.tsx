@@ -1,4 +1,4 @@
-import { Button } from '@chakra-ui/react';
+import { Button, HStack, Img } from '@chakra-ui/react';
 import useGenre, { Genre } from '../hook/useGenre';
 
 interface Props {
@@ -12,13 +12,11 @@ const GenreList = ({ onSelectGenre, selectedGenre }: Props) => {
   return (
     <>
       <div className="">
-        <h3 className="mt-3 ms-2 fw-bold">Genres</h3>
+        <h3 className="fw-bold">Genres</h3>
         <div className="grid gap-0 row-gap-3">
           {genres.map(genre => (
-            <div className="p-2 g-col-6 d-flex" key={genre.id}>
-              <div className="custom-genre-container">
-                <img src={genre.img} className="rounded me-3" />
-              </div>
+            <HStack key={genre.id}>
+              <Img src={genre.img} borderRadius="5" boxSize="40px" objectFit="cover" my="10px" />
               <Button
                 variant="link"
                 fontWeight={genre.id === selectedGenre?.id ? 'bold' : 'normal'}
@@ -29,7 +27,7 @@ const GenreList = ({ onSelectGenre, selectedGenre }: Props) => {
                 {' '}
                 {genre.name}
               </Button>
-            </div>
+            </HStack>
           ))}
         </div>
       </div>

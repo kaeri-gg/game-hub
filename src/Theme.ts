@@ -3,7 +3,7 @@ import { extendTheme, type ThemeConfig } from '@chakra-ui/react';
 
 // 2. Add your color mode config
 const config: ThemeConfig = {
-  initialColorMode: 'light',
+  initialColorMode: 'dark',
   useSystemColorMode: false,
 };
 
@@ -22,6 +22,12 @@ const theme = extendTheme({
       700: '#303a4e',
       800: '#1c2330',
       900: '#050c15',
+    },
+    green: {
+      200: '#13d3ae', // green main-color
+    },
+    yellow: {
+      200: '#d8e506', // main-color
     },
   },
 });
