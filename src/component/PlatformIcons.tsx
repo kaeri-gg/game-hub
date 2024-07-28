@@ -20,7 +20,7 @@ const PlatformIcons = ({ game }: { game: Game }) => {
   return (
     <HStack marginY={1}>
       {game.platforms.map(platform => (
-        <Icon key={platform.id} as={iconMap[platform.slug]} color="gray.500"></Icon>
+        <Icon key={platform.id} as={iconMap[platform.slug]} w={5} h={5} color="gray.500"></Icon>
       ))}
     </HStack>
   );

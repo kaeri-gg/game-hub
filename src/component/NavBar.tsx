@@ -1,5 +1,6 @@
 import { HStack, Image } from '@chakra-ui/react';
-import logo from '../assets/logo.webp';
+import ggWhite from '../assets/gg-white.svg';
+//import ggBlack from '../assets/gg-black.svg';
 import ColorModeSwitch from './ColorModeSwitch';
 import SearchInput from './SearchInput';
 
@@ -9,9 +10,9 @@ interface Props {
 
 const NavBar = ({ onSearch }: Props) => {
   return (
-    <HStack padding="10px">
+    <HStack py="10px">
       {/* logo */}
-      <Image src={logo} boxSize="60px" />
+      <Image src={ggWhite} boxSize="100px" />
 
       <SearchInput onSearch={onSearch} />
 

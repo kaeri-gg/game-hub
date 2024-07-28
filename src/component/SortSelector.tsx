@@ -1,4 +1,4 @@
-import { Menu, MenuButton, Button, MenuList, MenuItem } from '@chakra-ui/react';
+import { Menu, MenuButton, Button, MenuList, MenuItem, HStack, Text } from '@chakra-ui/react';
 import { BsChevronDown } from 'react-icons/bs';
 import useSortSelector, { Sort } from '../hook/useSortSelector';
 import { useState } from 'react';
@@ -20,7 +20,12 @@ const SortSelector = ({ onSelectedSortItem }: Props) => {
   return (
     <Menu>
       <MenuButton as={Button} rightIcon={<BsChevronDown />}>
-        Order by: ({selectedSortitem})
+        <HStack>
+          <Text mb={0}>Order by: </Text>
+          <Text mb={0} color="green.200">
+            ({selectedSortitem})
+          </Text>
+        </HStack>
       </MenuButton>
       <MenuList>
         {sortItem.map(sort => (

@@ -1,8 +1,14 @@
+import { Heading } from '@chakra-ui/react';
+
 interface Title {
   name: string;
 }
 const GameHeading = ({ name }: Title) => {
-  return <h1 className="display-3 fw-bold">{name}</h1>;
+  return (
+    <Heading as="h2" size="3xl" noOfLines={1} marginBottom={5}>
+      {name}
+    </Heading>
+  );
 };
 
 export default GameHeading;
