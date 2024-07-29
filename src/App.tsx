@@ -27,11 +27,24 @@ function App() {
 
   return (
     <>
-      <Box display="flex" flexDirection="column" minHeight="100vh">
+      <Box display={'flex'} flexDirection={'column'} minHeight={'100vh'}>
+        <Box
+          display={'flex'}
+          w="100%"
+          p={4}
+          flexDirection={'column'}
+          mb={'auto'}
+          position={'sticky'}
+          top={0}
+          zIndex={1000}
+          background={'gray.800'}
+        >
+          <NavBar onSearch={searchText => setGameQuery({ ...gameQuery, searchText })} />
+        </Box>
         <Grid
           templateAreas={{
-            base: `"nav" "main"`,
-            lg: `"nav nav" "aside main"`,
+            base: `"main"`,
+            lg: `"aside main"`,
           }}
           gap="2"
           paddingX={{
@@ -43,9 +56,6 @@ function App() {
             '2xl': '6em',
           }}
         >
-          <GridItem area="nav">
-            <NavBar onSearch={searchText => setGameQuery({ ...gameQuery, searchText })} />
-          </GridItem>
           <Show above="lg">
             <GridItem area="aside" w={'200px'}>
               <GenreList
@@ -99,7 +109,7 @@ function App() {
           </GridItem>
         </Grid>
 
-        <Box display={'flex'} w="100%" p={4} color={'gray.300'} justifyContent={'center'} marginTop="auto">
+        <Box display={'flex'} w={'100%'} p={4} color={'gray.300'} justifyContent={'center'} marginTop={'auto'}>
           <Box textAlign={'center'}>
             <Divider />
             <span>
