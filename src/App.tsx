@@ -34,15 +34,6 @@ function App() {
             lg: `"nav nav" "aside main"`,
           }}
           gap="2"
-          gridTemplateColumns={{
-            //width of the grid
-            xs: '100px 70vh', //
-            sm: '2fr', // ~480px
-            md: '2fr', // ~768px
-            lg: '250px 2fr', // ~992px
-            xl: '250px 2fr', // ~1280px
-            '2xl': '250px 2fr', // ~1536px
-          }}
           paddingX={{
             base: '1em',
             sm: '2em',
@@ -56,7 +47,7 @@ function App() {
             <NavBar onSearch={searchText => setGameQuery({ ...gameQuery, searchText })} />
           </GridItem>
           <Show above="lg">
-            <GridItem area="aside">
+            <GridItem area="aside" w={'200px'}>
               <GenreList
                 selectedGenre={gameQuery.genre}
                 onSelectGenre={genre => {
